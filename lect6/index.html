@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent
+        {
+            height:500px;
+            width: 100wh;
+            border: solid black;
+            display: flex;
+            /*for x axis*/
+            /*justify-content: baseline;default*/
+            justify-content: center; /*to get at center*/
+            /* justify-content: end; to grt at end*/
+            justify-content: space-between;/*space in between only*/
+            /* justify-content: space-around; space around each child */
+            /* justify-content:space-evenly; space divided evenly */
+            /* for y axis */
+            align-items: center;/* to get at center */
+            /* align-items: end; to get at end*/
+        }
+        #parent div{
+            height:125px;
+            width: 125px;
+        }
+        #parent div:nth-of-type(1){
+            background-color: aqua;
+        }
+        #parent div:nth-of-type(2){
+            background-color:salmon;
+        }
+        #parent div:nth-of-type(3){
+            background-color: gold;
+        }
+        #parent div:nth-of-type(4){
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
