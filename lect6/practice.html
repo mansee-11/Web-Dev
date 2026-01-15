@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #parent{
+            height: 50px;
+            width: 100vw;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        #one{
+            color:cornflowerblue;
+        }
+        #two{
+            color:aqua;
+            display: flex;
+            justify-content: space-evenly;
+            width: 500px;
+        }
+        #three{
+            color: cornflowerblue;
+            background-color:white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="parent">
+        <div id="one">
+            <h3>Home</h3>
+            
+        </div>
+        <div id="two">
+            <div>
+                <h3>ABOUT</h3>
+            </div>
+            <div>
+                <h3>CONTACT</h3>
+            </div>
+            <div>
+                <h3>DETAILS</h3>
+            </div>
+            <div>
+                <h3>MENU</h3>
+            </div>
+        </div>
+        <button id="three">
+            <h2>LOGIN</h2>
+        </button>
+    </nav>
+</body>
+</html>
