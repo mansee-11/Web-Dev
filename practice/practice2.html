@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        nav{
+            height: 50px;
+            color: antiquewhite;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #supparent{
+            /* height: 90%;
+            width: 90%; */
+            display: flex;
+            flex-wrap: wrap ;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        #parent{
+            height: 350px;
+            width: 250px;
+            border-radius: 11px;
+            border: 1px solid gray;
+            margin: 50px auto;
+            position: relative;
+            display: inline-block;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        }
+        #parent:hover{
+           box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        .status{
+            height: 20px;
+            width: 65px;
+            color: white;
+            position:absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 11px;
+            right: 5%;
+            top: 5%;
+            border-radius: 10px;
+        }
+        #on{
+            background-color:green;
+        }
+        #off{
+            background-color: red;
+        }
+        #circle
+        {
+            width: 90px;
+            height: 90px;
+            background-color: black;
+            color: antiquewhite;
+            border-radius: 50%;
+            margin: 50px auto;
+            position: relative;
+        }
+        #circle div:nth-of-type(1){
+            color: antiquewhite;
+            position: absolute;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            top: 25%;
+            left: 30%;
+        }
+        #name{
+            height: 40px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: -15%;
+            left: 50px;
+        }
+        #work{
+            height: 16px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            color: grey;
+            position: absolute;
+            top: 52%;
+            left: 20%;
+        }
+        #desc{
+            height: 50px;
+            width: 90%;
+            border: 1px dashed grey;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left:5%;
+            top: 60%;
+        }
+        .one{
+            height: 35px;
+            width: 90%;
+        }
+        #profile{
+            height: 30px;
+            width: 100px;
+            border-radius: 20px;
+            font-size: medium;
+            color: antiquewhite;
+            background-color: black;
+            border-color: cadetblue;
+            position: absolute;
+            top: 80%;   
+            left: 30%;
+            transition: 1s;
+            cursor: pointer;
+        } 
+        button:hover{
+            transform: scale(1.25,1.25);
+        }      
+        #help{
+            height: 40px;
+            width: 70px;
+            border-radius: 30px;
+            border:0px;
+            color: white;
+            background-color: red;
+            position: fixed;
+            left: 80%;
+            bottom: 20px;
+            transition: 1s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div><h3>Mywebsite</h3></div>
+        <div>
+            <h3>Home|About|Contact</h3>
+        </div>
+    </nav>
+    <div id="supparent">
+    <div id="parent">
+        <div class="status" id="on">
+            ONLINE
+        </div>
+        <div id="circle">
+            <div>
+                <h1>M</h1>
+            </div>
+        </div>
+        <div id="name">
+            <h1>Mansee</h1>
+        </div>
+        <div id="work">
+            <p>Web Developer</p>
+        </div>
+        <div id="desc">
+            <p class="one">Builds modern websites using HTML & CSS.</p>
+        </div>
+        <button id="profile">
+            View Profile
+        </button>
+    </div>
+        <div id="parent">
+        <div class="status" id="off">
+            OFFLINE
+        </div>
+        <div id="circle">
+            <div>
+                <h1>R</h1>
+            </div>
+        </div>
+        <div id="name">
+            <h1>Rahul</h1>
+        </div>
+        <div id="work">
+            UI Designer
+        </div>
+        <div id="desc">
+            <p class="one">Designs clean and user-friendly interfaces.</p>
+        </div>
+        <button id="profile">
+            View Profile
+        </button>
+    </div>
+        <div id="parent">
+        <div class="status" id="on">
+            ONLINE
+        </div>
+        <div id="circle">
+            <div>
+                <h1>A</h1>
+            </div>
+        </div>
+        <div id="name">
+            <h1>Aman</h1>
+        </div>
+        <div id="work">
+            Backend Developer
+        </div>
+        <div id="desc">
+            <p class="one">Works with server logic and databases.</p>
+        </div>
+        <button id="profile">
+            View Profile
+        </button>
+    </div>
+    </div>
+    <button id="help">
+        HELP
+    </button>
+</body>
+</html>
