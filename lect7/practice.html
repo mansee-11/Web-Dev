@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        #parent{
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            background-color: black;
+            flex-wrap: wrap;
+        }
+        .child_A{
+            width: 600px;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+        h1{
+            font-size: 32px;
+        }
+        .child_B{
+            width:300px;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        @media screen and (max-width:480px){
+            #parent{
+                
+                flex-direction: column;  
+            }
+            .child_A{
+                flex-direction: column;
+            }  
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="child_A">
+            <h1>Profile</h1>
+            <h3>Home</h3>
+            <h3>Link</h3>
+            <h3>Dropdown
+                <select>
+                    <option>select one</option>
+                    <option>details</option>
+                    <option>summary</option>
+                    <option>about</option>
+                </select>
+            </h3>
+        </div>
+        <div class="child_B">
+            <input id="one" type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+    </div>
+</body>
+</html>
