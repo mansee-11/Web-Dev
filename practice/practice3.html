@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚KidLearn</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        body{
+            background-image: url(https://plus.unsplash.com/premium_photo-1664301420258-06811f6c1b4a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size: cover;
+        }    
+        #main{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+            font-family: 'Baloo 2', cursive;
+        }
+        nav{
+            height: 70px;
+            background: linear-gradient(135deg,rgb(134, 93, 88),rgb(75, 53, 50));
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+        #logo{
+            font-size: 32px;
+            font-family: 'Baloo 2', cursive;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #logo:hover{
+            transform: scale(1.05) translateY(-5px);
+        }
+        #option{
+            width: 200px;
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+        #option h1:hover{
+            box-shadow: rgba(230, 222, 222, 0.17) 0px -23px 25px 0px inset, rgba(219, 211, 211, 0.15) 0px -36px 30px 0px inset, rgba(159, 152, 152, 0.1) 0px -79px 40px 0px inset;
+        }
+        #option h1{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            /* background-color: white; */
+        }
+        #welcome{
+            width: 95%;
+            margin-top: 25px;
+            color: white;
+            border-radius: 21px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(135deg,rgb(134, 93, 88),rgb(75, 53, 50));
+        }
+        #welcome h1{
+            margin-top: 10px;
+        }
+        #welcome h2{
+            font-size: 32px;
+            width: 86%;
+        }
+        #welcome h3{
+            font-size: 24px;
+            width: 86%;
+            margin-bottom: 25px;
+        }
+        #tab{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .tab_child{
+            background-color: white;
+            height: 125px;
+            width: 300px;
+            border: 2px solid lightgray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: grey;
+            border-radius: 11px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .tab_child:hover{
+            box-shadow: rgb(18, 26, 35) 0px 20px 30px -10px;
+            transform: scale(1.05);
+            transform: translateY(-10px);
+        }
+        .tab_child h1{
+            color: black;
+        }
+        #part_III{
+            width: 95%;
+            display: flex;
+            justify-content: left;
+            justify-content: space-between;
+        }
+        #work{
+            width: 100%;
+            display: flex;
+            align-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            row-gap: 20px;
+        }
+        #new{
+            background:rgb(187, 144, 126);
+        }
+        #progress{
+            background: rgb(115, 115, 86);
+        }
+        #done{
+            background: rgb(39, 110, 103);
+        }
+        #card{
+            background-color: white;
+            height: 200px;
+            width: 380px;
+            border-radius:21px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid lightgray;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #card:hover{
+            box-shadow: rgb(16, 24, 34) 0px 20px 30px -10px;
+            transform: scale(1.05);
+            transform: translateY(-10px);
+        }
+        .one{
+            margin: 0px;
+            height: 20px;
+            border-top-left-radius: 21px;
+            border-top-right-radius: 21px;
+        }
+        .two{
+            margin-left: 10px;
+            gap: 5px;
+            display: flex;
+        }
+        h5{
+            color: grey;
+        }
+        .three{
+            width: 95%;
+            color: grey;
+            display: flex;
+            justify-content: space-between;
+        }
+        .status{
+            margin-left: 10px;
+            color:white;
+            display: flex;
+            justify-content: center;
+            width: 100px;
+            border-radius: 16px;
+            cursor: pointer;
+        }
+        .status:hover{
+            box-shadow: rgba(66, 63, 63, 0.17) 0px -23px 25px 0px inset, rgba(56, 53, 53, 0.15) 0px -36px 30px 0px inset, rgba(159, 152, 152, 0.1) 0px -79px 40px 0px inset;
+        }
+        .four{
+            display: flex;
+            justify-content: center;
+        }
+        .start{
+            height: 40px;
+            width: 80%;
+            border: 0px;
+            border-radius: 21px;
+            cursor: pointer;
+        }
+        .start:hover{
+            box-shadow: rgba(66, 63, 63, 0.17) 0px -23px 25px 0px inset, rgba(56, 53, 53, 0.15) 0px -36px 30px 0px inset, rgba(159, 152, 152, 0.1) 0px -79px 40px 0px inset;
+        }
+        .thanks{
+            color: white;
+            background:rgb(39, 110, 103);
+            width: 90%;
+            border-radius: 21px;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 20px;
+        }
+        .thanks h1:nth-of-type(1){
+            margin-top: 10px;
+        }
+        .thanks h3{
+            width: 90%;
+            margin-bottom: 10px;
+        }
+        .footer{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            gap: 20px;
+            background: linear-gradient(135deg,rgb(134, 93, 88),rgb(75, 53, 50));
+        }
+        .footer div{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+        }
+        .footer div h1{
+            cursor: pointer;
+        }
+        .footer div h4{
+            cursor: pointer;
+        }
+        #txt{
+            margin-top: 20px;
+            width: 90%;
+        }
+        @media screen and (min-width:800px){
+            .thanks h3{
+                width: 550px;
+            }
+            .footer div{
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            📚KidLearn
+        </div>
+        <div id="option">
+            <h1>🏠</h1>
+            <h1>🗒️</h1>
+            <h1>👤</h1>
+        </div>
+    </nav>
+    <div id="main">
+        <div id="welcome">
+            <h1>Welcome back!🎉</h1>
+            <h2>Hey Champ! Ready to Learn? 🌟</h2>
+            <h3>You have 3 new assignments waiting for you. Let's make today awesome!</h3>
+        </div>
+        <div id="tab">
+            <div class="tab_child">
+                <h1>📋</h1>
+                <h1>6</h1>
+                Total
+            </div>
+            <div class="tab_child">
+                <h1>✅</h1>
+                <h1>1</h1>
+                Completed
+            </div>
+            <div class="tab_child">
+                <h1>🚀</h1>
+                <h1>2</h1>
+                In Progress
+            </div>
+            <div class="tab_child">
+                <h1>⭐</h1>
+                <h1>150</h1>
+                Points
+            </div>
+        </div>
+        <div id="part_III">         
+            <h1>🏆My Assignments</h1>   
+            <h3>...Keep going!</h3>
+        </div>
+        <div id="work">
+            <div class="new" id="card">
+                <div class="one" id="new"></div>
+                <div class="two">
+                    <h1>🔢</h1>
+                    <div id="desc">
+                        <h3>Math Practice</h3>
+                        <h5>📖Mathematics</h5>
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="status" id="new">New! ✨</div>
+                    <div>🕒Tomorrow</div>
+                </div>
+                <div class="four">
+                    <button class="start" id="new">Start Now!🚀</button>
+                </div>
+            </div>
+            <div class="progress" id="card">
+                <div class="one" id="progress"></div>
+                <div class="two">
+                    <h1>📝</h1>
+                    <div id="desc">
+                        <h3>Story Writing</h3>
+                        <h5>📖English</h5>
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="status" id="progress">Working ✨</div>
+                    <div>🕒In 3 days</div>
+                </div>
+                <div class="four">
+                    <button class="start" id="progress">Start Now!🚀</button>
+                </div>
+            </div>
+            <div class="new" id="card">
+                <div class="one" id="new"></div>
+                <div class="two">
+                    <h1>🔬</h1>
+                    <div id="desc">
+                        <h3>Science Project</h3>
+                        <h5>📖Science</h5>
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="status" id="new">New ✨</div>
+                    <div>🕒Next Week</div>
+                </div>
+                <div class="four">
+                    <button class="start" id="new">Start Now!🚀</button>
+                </div>
+            </div>
+            <div class="new" id="card">
+                <div class="one" id="new"></div>
+                <div class="two">
+                    <h1>🎯</h1>
+                    <div id="desc">
+                        <h3>Number Games</h3>
+                        <h5>📖Mathematics</h5>
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="status" id="new">New! ✨</div>
+                    <div>🕒Today</div>
+                </div>
+                <div class="four">
+                    <button class="start" id="new">Start Now!🚀</button>
+                </div>
+            </div>
+            <div class="done" id="card">
+                <div class="one" id="done"></div>
+                <div class="two">
+                    <h1>🎨</h1>
+                    <div id="desc">
+                        <h3>Drawing Activity</h3>
+                        <h5>📖Art</h5>
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="status" id="done">Done! ✨</div>
+                    <div>🕒Completed</div>
+                </div>
+                <div class="four">
+                    <button class="start" id="done">View Details!👀</button>
+                </div>
+            </div>
+            <div class="progress" id="card">
+                <div class="one" id="progress"></div>
+                <div class="two">
+                    <h1>📚</h1>
+                    <div id="desc">
+                        <h3>Hindi Poem</h3>
+                        <h5>📖Hindi</h5>
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="status" id="progress">Working ✨</div>
+                    <div>🕒In 2 days</div>
+                </div>
+                <div class="four">
+                    <button class="start" id="progress">Start Now!🚀</button>
+                </div>
+            </div>
+        </div>
+        <div class="thanks">
+            <h1>⭐⭐⭐</h1>
+            <h1>You're doing amazing! 🎉</h1>
+            <h3>Complete 2 more assignments to unlock a special badge!</h3>
+        </div>
+        <div class="footer">
+            <div id="txt">
+                <h3>Keep Learning, Keep Growing!</h3>
+                <h4>Made with 🤍 for kids © 2026</h4>
+            </div>
+            <div>
+                <h4>🏠 Home</h4>
+                <h4>📖 Help</h4>
+                <h4>⭐ Rewards</h4>
+            </div>
+            <div>
+                <h1>🌟</h1>
+                <h1>🎨</h1>
+                <h1>📚</h1>
+                <h1>🎯</h1>
+                <h1>🏆</h1>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
