@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background:linear-gradient(white,pink,red);
+            height: 100px;
+            width: 100px;
+            margin: 300px auto;
+            border-radius: 50%;
+            border: solid;
+            /* animation-name: first;
+            animation-duration: 900ms;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in; */
+        }
+        div:hover{
+            animation-name: first;
+            animation-duration: 900ms;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in;
+        }
+        @keyframes first {
+            0%{
+                transform: translateY(-300px);
+            }
+            100%{
+                transform: translateY(100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Animation</h2>
+    <div></div>
+</body>
+</html>
