@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg,blue,purple);
+        }
+        #parent{
+            height: 500px;
+            width: 300px;
+            background-color: white;
+            border-radius: 21px;
+            color: blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        h1{
+            margin:0px;
+            margin-top: 10px;
+        }
+        p{
+            margin: 0;
+            color: rgb(75, 72, 72);
+        }
+        #boxes{
+            padding: 10px;
+            height: 50%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr  1fr;
+            gap: 10px;
+        }
+        .box{
+            border-radius: 11px;
+            height: 80px;
+            width: 80px;
+            background-color: rgb(218, 208, 208);
+        }
+        button{
+            background: linear-gradient(blue,purple);
+            border-radius: 21px;
+            height: 40px;
+            width: 100px;
+            border: 0px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script src="index.js"></script>
+    <div id="parent">
+        <h1>🎮Whack-a-Box</h1>
+        <p>click the highlighted box!</p>
+        <div id="boxes">
+            <div id="one" class="box"></div>
+            <div id="two" class="box"></div>
+            <div id="three" class="box"></div>
+            <div id="four" class="box"></div>
+            <div id="five" class="box"></div>
+            <div id="six" class="box"></div>
+            <div id="seven" class="box"></div>
+            <div id="eight" class="box"></div>
+            <div id="nine" class="box"></div>
+        </div>
+        <button>Start Game</button>
+    </div>
+</body>
+</html>
