@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: darkslategray;
+            position: relative;
+            height: 1100px;
+        }
+        h1{
+            width: 600px;
+            font-size: 64px;
+            position: absolute;
+            margin-left: 350px;
+            color: aquamarine;
+            animation: head;
+            animation-duration: 2s;
+            position: fixed;
+        }
+        #main{
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 90px;
+            z-index: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+        .child{
+            user-select: none;
+            pointer-events: none;
+            margin-top: -200px;
+            animation-duration: 4s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+        }
+        #one{
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-name: fly;
+        }
+        #two{
+            animation-duration: 6s;
+            animation-timing-function: ease-out;
+            animation-name: fly;
+        }
+        #three{
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+            animation-name: fly;
+        }
+        #four{
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-name: fly;
+        }
+        #five{
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-name: fly;
+        }
+        #six{
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-name: fly;
+        }
+        #seven{
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-name: fly;
+        }
+        #eight{
+            animation-duration: 6s;
+            animation-timing-function: ease-out;
+            animation-name: fly;
+        }
+        @keyframes fly {
+            0%{
+                transform: translateY(800px);
+            }
+        }
+        @keyframes head {
+            0%{
+                transform: translateX(-400px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        #cake{
+            height: 350px;
+            width: 600px;
+            background-color: aquamarine;
+            border-radius: 21px;
+            border: 5px double darkslategray;
+            position: fixed;
+            top: 150px;
+            left: 325px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            gap: 3px;
+            z-index: 2;
+        }
+        #candle{
+            font-size: 64px;
+            animation-name: drop;
+            animation-duration: 6s;
+            animation-timing-function: cubic-bezier(1,0.82, 0.165,0.055);
+            z-index: 2;
+        }
+        #l_one{
+            height: 60px;
+            width: 100px;
+            background-color: darksalmon;
+            border-top-left-radius: 11px;
+            border-top-right-radius: 11px;
+            animation-name: drop;
+            animation-duration: 5s;
+            animation-timing-function: cubic-bezier(1,0.82, 0.165,0.055);
+            z-index: 2;
+        }
+        #l_two{
+            height: 60px;
+            width: 200px;
+            background-color: darksalmon;
+            border-top-left-radius: 11px;
+            border-top-right-radius: 11px;
+            animation-name: drop;
+            animation-duration: 4s;
+            z-index: 2;
+            animation-timing-function:cubic-bezier(1,0.82, 0.165,0.055);
+        }
+        #l_three{
+            height: 60px;
+            width: 300px;
+            background-color: darksalmon;
+            border-top-left-radius: 11px;
+            border-top-right-radius: 11px;
+            margin-bottom: 20px;
+            animation-name: drop;
+            animation-duration: 3s;
+            animation-timing-function:ease-in;
+            z-index: 2;
+        }
+        @keyframes drop {
+            0%{
+                transform: translateY(-800px);
+            }
+        }
+        button{
+            position: fixed;
+            top:475px;
+            right: 400px;
+            height: 50px;
+            width: 150px;
+            border-radius: 11px;
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            animation-name: glow;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-duration: 500ms;
+            animation-delay: 6s;
+            z-index: 3;
+        }
+        @keyframes glow {
+            100%{
+                box-shadow: rgba(243, 227, 227, 0.25) 0px 14px 28px, rgba(234, 220, 220, 0.22) 0px 10px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to party🎊</h1>
+    <div id="cake">
+        <div id="candle">🕯️</div>
+        <div id="l_one"></div>
+        <div id="l_two"></div>
+        <div id="l_three"></div>
+    </div>
+    <div id="ui-layer">
+        <a href="third.html">
+            <button>Memories</button>
+        </a>
+    </div>
+    <div id="main">
+        <div id="one" class="child">🎈</div>
+        <div id="two" class="child">🎈</div>
+        <div id="three" class="child">🎈</div>
+        <div id="four" class="child">🎈</div>
+        <div id="five" class="child">🎈</div>
+        <div id="six" class="child">🎈</div>
+        <div id="seven" class="child">🎈</div>
+        <div id="eight" class="child">🎈</div>
+        <!-- <div id="nine" class="child">🎈</div> -->
+        <!-- <div id="ten" class="child">🎈</div> -->
+    </div>
+    <audio id="bgMusic" autoplay loop src="birthday.mp3" type="audio/mpeg"></audio>
+</body>
+</html>
