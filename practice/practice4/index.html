@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: center;
+            background-color:darkslategrey;
+            flex-wrap: wrap;
+        }
+        #title{
+            width: 1250px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            background-color: aquamarine;
+            color: darkslategray;
+            flex-wrap: wrap;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #title h1{
+            animation-name: come;
+            animation-duration: 3s;
+        }
+        @keyframes come {
+            0%{
+                transform: translateX(-1000px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        #parent{
+            height: 400px;
+            width: 1200px;
+            border-radius: 21px;
+            display: flex;
+            gap: 100px;
+        }
+        
+        #msg{
+            height: 100%;
+            width: 45%;
+            border-radius: 21px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* gap: 20px; */
+            font-family: 'Arial Black';
+            color: aquamarine;
+            /* border: 2px solid; */
+        }
+        #msg div{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            height: 60%;
+        }
+        button{
+            height: 100px;
+            width: 300px;
+            font-size: 64px;
+            background-color: aquamarine;
+            color: black;
+            border-radius: 21px;
+            cursor: pointer;
+            animation-name: pop;
+            animation-duration: 800ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in;
+        }   
+        @keyframes pop {
+            100%{
+                transform: scale(1.1,1.1);
+                box-shadow: rgba(81, 191, 242, 0.25) 0px 14px 28px, rgba(104, 242, 244, 0.22) 0px 10px 10px;
+            }
+        }
+        #flip{
+            height: 100%;
+            width: 50%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: 2s;   
+            cursor: pointer;
+        }
+        #flip div{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border-radius: 21px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        #flip div:nth-of-type(1){
+            backface-visibility: hidden;
+            z-index: 2;
+        }
+        #flip div:nth-of-type(2){
+            transform: rotateY(180deg);
+        }
+        #flip:hover{
+            transform: rotateY(180deg);
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 21px;
+        }
+        @keyframes img_rotate {
+            100%{
+                transform: rotateY(180deg);
+            }
+        }
+        #wish{
+            font-size: 42px;
+        }
+        h2{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>
+            🎊🎂HAPPIESTTT BIRTHDAYYY🎂🎊
+        </h1>
+    </div>
+    <div id="parent">
+        <div id="msg">
+            <div>
+                <h1><div id="wish">Happy Birthday💟</div> -----👨🏻‍⚕️Doctor Sahab-----</h1>
+                <h2>Exitted???? let's have a party🎉👇🏻</h2>
+            </div>
+            <a href="second.html">
+                <button>Celebrate</button>
+            </a>
+        </div>
+        <div id="flip">
+            <div id="first"> 
+                <img src="https://img.freepik.com/premium-photo/text-48-made-two-golden-floating-helium-balloons_1077802-207782.jpg?semt=ais_hybrid&w=740&q=80">
+            </div>
+            <div id="second">
+                <img src="beach2.jpeg">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
