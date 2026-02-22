@@ -11,32 +11,32 @@
 </head>
 <body>
     <div id="main" class="w-screen bg-black">
-        <nav class=" backdrop-blur-md z-10 flex flex-wrap items-center justify-between fixed bg-black/50 border-b border-b-gray-500 text-white h-[70px] w-full">
+        <nav class="backdrop-blur-md z-10 flex items-center justify-between fixed bg-black/50 border-b border-b-gray-500 text-white h-[70px] w-full flex-wrap">
             <div id="title" class="flex justify-center w-[150px] text-3xl font-semibold font-sans subpixel-antialiased">Port<span class="text-red-400">folio</span></div>
-            <div id="parts" class="flex justify-between w-1/3 text-gray-400">
+            <div id="parts" class="sm:flex justify-between w-1/3 text-gray-400 hidden ">
                 <button id="one" class="hover:text-red-400 hover:underline hover:underline-offset-4 hover:decoration-red-400">Home</button>
                 <button id="two" class="hover:text-red-400 hover:underline hover:underline-offset-4 hover:decoration-red-400">About</button>
                 <button id="three" class="hover:text-red-400 hover:underline hover:underline-offset-4 hover:decoration-red-400">Work</button>
                 <button id="four" class="hover:text-red-400 hover:underline hover:underline-offset-4 hover:decoration-red-400">Skills</button>
                 <button id="five" class="hover:text-red-400 hover:underline hover:underline-offset-4 hover:decoration-red-400">Contact</button>
             </div>
-            <div class="flex justify-around items-center w-1/6">
+            <div class="flex justify-around items-center sm:w-1/6 w-2/6 flex-wrap flex-row">
                 <button id="theme" class="hover:bg-red-400/80 hover:duration-500 h-[40px] w-[40px] flex justify-center items-center rounded-xl"><i class="fa-solid fa-circle-half-stroke"></i></button>
                 <button id="five_2" class="w-[90px] h-[35px] bg-white text-black flex items-center justify-center rounded-xl hover:ease-in hover:duration-500 hover:-translate-y-1">Let's Talk</button>
             </div>
         </nav>
         <div id="nav" class="h-[70px] w-full"></div>
         <div id="home" class="w-full flex flex-wrap">
-            <div class="flex gap-24 text-gray-600 ml-4 h-[550px] w-full">
-                <div class="w-1/2 gap-6 flex flex-col">
+            <div class="flex sm:gap-24 text-gray-600 ml-4 sm:h-[550px] h-[1200px] w-full sm:flex-row flex-col">
+                <div class="sm:w-1/2 gap-6 flex flex-col">
                     <div class="text-red-400 text-xl">Welcome to my portfolio</div>
-                    <h1 class="text-7xl font-bold"><span id="hi" class="text-white">Hi, I'm </span><span class="text-red-400 italic font-serif">Mansee </span>Designer & Developer</h1>
-                    <div class="text-lg w-2/3">I create beautiful digital experiences that combine stunning design with clean, efficient code. Let's build something amazing together.</div>
-                    <div class="flex gap-4">
+                    <h1 class="text-7xl font-bold w-[95%]"><span id="hi" class="text-white">Hi, I'm </span><span class="text-red-400 italic font-serif">Mansee </span>Designer & Developer</h1>
+                    <div class="text-lg sm:w-2/3 w-[90%]">I create beautiful digital experiences that combine stunning design with clean, efficient code. Let's build something amazing together.</div>
+                    <div class="flex flex-wrap gap-4 w-[90%]">
                         <button id="three_2" class="text-black bg-white h-[50px] w-[200px] rounded-xl font-semibold">View My Work <i class="fa-solid fa-arrow-down"></i></button>
                         <button id="resume" class="border-2 border-gray-500 h-[50px] w-[200px] rounded-xl font-semibold text-white hover:duration-300 hover:border-white hover:bg-neutral-600">Download resume</button>
                     </div>
-                    <div id="icon" class="flex gap-4 text-white">
+                    <div id="icon" class="flex gap-4 text-white sm:justify-start justify-center sm:w-full w-screen">
                         <a href="https://github.com/mansee-11" target="_blank">
                                 <button class="rounded-full h-[45px] w-[45px] border border-gray-500 hover:duration-300 hover:border-red-400 hover:text-red-400"><i class="fa-brands fa-github text-xl"></i></button>
                         </a>
@@ -45,8 +45,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="w-1/3 ml-[50px]">
-                    <div class=" relative w-[400px] h-[400px] mt-10 rounded-full ">
+                <div class="sm:w-1/3 sm:ml-[50px] w-full flex flex-wrap justify-center">
+                    <div class=" relative sm:w-[400px] sm:h-[400px] w-[300px] h-[300px] mt-10 rounded-full ">
                         <div class=" absolute w-full h-full rounded-full 
                         outline-2 outline-offset-[15px] outline-dashed outline-red-950
                         animate-[spin_3250ms_linear_infinite]"></div>
@@ -56,53 +56,53 @@
                 </div>
             </div>
         </div>
-        <div id="about" class="flex flex-col gap-8 items-center bg-neutral-900 h-[900px] w-full text-gray-600">
+        <div id="about" class="flex flex-col gap-8 items-center bg-neutral-900 sm:h-[900px] h-[2000px] w-full text-gray-600">
             <div class="text-red-400 mt-[80px] text-base">ABOUT ME</div>
-            <div id="a_desc" class="text-5xl text-center w-3/5 font-bold text-white">Passionate about creating <span class="italic font-semibold font-serif">digital magic</span></div>
-            <div class="w-4/5 flex gap-24">
-                <div class=" w-1/2 flex flex-col gap-8 text-lg">
+            <div id="a_desc" class="text-5xl text-center sm:w-3/5 font-bold text-white">Passionate about creating <span class="italic font-semibold font-serif">digital magic</span></div>
+            <div class="w-4/5 flex gap-24 sm:flex-row flex-col">
+                <div class=" sm:w-1/2 flex flex-col gap-8 text-lg ">
                     <div>I’m a passionate computer science student and aspiring web developer. I enjoy building clean, responsive websites and continuously improving my skills through hands-on projects and learning.</div>
                     <div>I’m currently learning frontend development using HTML, CSS, JavaScript, bootstrap and Tailwind CSS. I enjoy turning ideas into real projects and exploring new technologies.</div>
                 </div>
                 <div class="grid grid-cols-2 grid-rows-2 gap-6 text-white">
-                    <div id="a_tab1" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 h-[120px] w-[200px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-5xl">🎓</span> Computer Science Student</div>
-                    <div id="a_tab2" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 h-[120px] w-[200px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">🧩</span> Strong in Problem Solving</div>
-                    <div id="a_tab3" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 h-[120px] w-[200px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">📈</span> Actively Improving Skill</div>
-                    <div id="a_tab4" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 h-[120px] w-[200px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">🛠</span> Hands-on with Modern Tools</div>
+                    <div id="a_tab1" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-5xl">🎓</span> Computer Science Student</div>
+                    <div id="a_tab2" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">🧩</span> Strong in Problem Solving</div>
+                    <div id="a_tab3" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">📈</span> Actively Improving Skill</div>
+                    <div id="a_tab4" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">🛠</span> Hands-on with Modern Tools</div>
                 </div>
             </div>
-            <div class="w-4/5 grid grid-cols-4 grid-rows-1 gap-12 pt-8">
-                <div id="a_card1" class=" group border border-zinc-700 h-[220px] w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
+            <div class="w-4/5 grid sm:grid-cols-4 grid-cols-1 grid-rows-1 gap-12 pt-8">
+                <div id="a_card1" class=" group border border-zinc-700 sm:h-[220px] sm:w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
                     <div class="h-[50px] w-[50px] bg-red-900/30 rounded-xl flex justify-center items-center text-red-400 group-hover:bg-red-900/50"><i class="fa-solid fa-palette text-2xl"></i></div>
                     <div id="a_card_11" class="text-white font-bold">UI/UX Design</div>
                     <div>Creating beautiful, intuitive interfaces that users love</div>
                 </div>
-                <div id="a_card2" class=" group border border-zinc-700 h-[220px] w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
+                <div id="a_card2" class=" group border border-zinc-700 sm:h-[220px] sm:w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
                     <div class="h-[50px] w-[50px] bg-red-900/30 rounded-xl flex justify-center items-center text-red-400 group-hover:bg-red-900/50"><i class="fa-solid fa-code text-2xl"></i></div>
                     <div id="a_card_22" class="text-white font-bold">Development</div>
                     <div>Building robust applications with modern technologies</div>
                 </div>
-                <div id="a_card3" class=" group border border-zinc-700 h-[220px] w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
+                <div id="a_card3" class=" group border border-zinc-700 sm:h-[220px] sm:w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
                     <div class="h-[50px] w-[50px] bg-red-900/30 rounded-xl flex justify-center items-center text-red-400 group-hover:bg-red-900/50"><i class="fa-regular fa-lightbulb text-2xl"></i></div>
                     <div id="a_card_33" class="text-white font-bold">Problem Solving</div>
                     <div>Finding creative solutions to complex challenges and problems</div>
                 </div>
-                <div id="a_card4" class="group border border-zinc-700 h-[220px] w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
+                <div id="a_card4" class="group border border-zinc-700 sm:h-[220px] sm:w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
                     <div class="h-[50px] w-[50px] bg-red-900/30 rounded-xl flex justify-center items-center text-red-400 group-hover:bg-red-900/50"><i class="fa-solid fa-meteor text-2xl"></i></div>
                     <div id="a_card_44" class="text-white font-bold">Fast Delivery</div>
                     <div>Delivering quality and correct work on time, every time </div>
                 </div>
             </div>
         </div>
-        <div id="work" class="flex flex-col gap-6 items-center bg-black h-[1550px] w-full text-gray-600">
+        <div id="work" class="flex flex-col gap-6 items-center bg-black sm:h-[1550px] h-[2500px] w-full text-gray-600">
             <div class="text-red-400 mt-[80px] text-base">MY WORK</div>
-            <div id="w_title" class="text-6xl text-center w-3/5 font-bold text-white">Featured <span class="italic font-semibold font-serif">Projects</span></div>
-            <div class="text-xl">Here are some of the practice projects I’ve worked on while learning web development.</div>
-            <div class="p-8 flex gap-12 h-[400px] w-full">
-                <div class="w-1/2 h-full rounded-3xl border overflow-hidden">
+            <div id="w_title" class="text-5xl sm:text-6xl text-center sm:w-3/5 font-bold text-white">Featured <span class="italic font-semibold font-serif">Projects</span></div>
+            <div class="text-xl w-[90%] text-center">Here are some of the practice projects I’ve worked on while learning web development.</div>
+            <div class="p-8 flex sm:flex-row flex-col gap-12 sm:h-[400px] w-full">
+                <div class="sm:w-1/2 h-full rounded-3xl border overflow-hidden">
                     <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-200" src="https://images.unsplash.com/photo-1579309401389-a2476dddf3d4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
                 </div>
-                <div class="flex flex-col justify-center w-1/2 h-full gap-4">
+                <div class="flex flex-col justify-center sm:w-1/2 h-full gap-4">
                     <div class="text-red-400">JavaScript game logic and loops</div>
                     <div id="w_tab1" class="text-4xl text-white font-bold">🐍 Snake Game</div>
                     <div class="text-lg">A classic snake game built using JavaScript where the player controls the snake using keyboard inputs.</div>
@@ -115,8 +115,11 @@
                     </a>
                 </div>
             </div>
-            <div class="p-8 flex gap-12 h-[400px] w-full">
-                <div class="flex flex-col justify-center w-1/2 h-full gap-4">
+            <div class="p-8 flex sm:flex-row flex-col gap-12 sm:h-[400px] w-full">
+                <div class="sm:hidden block h-full rounded-3xl border overflow-hidden">
+                    <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-150" src="https://plus.unsplash.com/premium_vector-1734051503949-ad1086fb2260?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                </div>
+                <div class="flex flex-col justify-center sm:w-1/2 h-full gap-4">
                     <div class="text-red-400">Web Design & Development</div>
                     <div id="w_tab2" class="text-4xl text-white font-bold">📚KidLearn – Learning Dashboard</div>
                     <div class="text-lg">A kid-friendly learning dashboard built using web technologies showing assignments, progress, points, and motivational messages. This project helped me practice layout and UI design skills.</div>
@@ -128,15 +131,15 @@
                         <button id="w_btn2" class="border border-gray-500 h-[50px] w-[200px] text-xl text-white rounded-xl hover:duration-300 hover:border-white hover:bg-neutral-600 hover:border-2">View Project <i class="fa-solid fa-up-right-from-square"></i></button>
                     </a>
                 </div>
-                <div class="w-1/2 h-full rounded-3xl border overflow-hidden">
+                <div class="sm:block hidden w-1/2 h-full rounded-3xl border overflow-hidden">
                     <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-150" src="https://plus.unsplash.com/premium_vector-1734051503949-ad1086fb2260?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
                 </div>
             </div>
-            <div class="p-8 flex gap-12 h-[400px] w-full">
-                <div class="w-1/2 h-full rounded-3xl border overflow-hidden">
+            <div class="p-8 flex sm:flex-row flex-col gap-12 sm:h-[400px] w-full">
+                <div class="sm:w-1/2 h-full rounded-3xl border overflow-hidden">
                     <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-125" src="birthday.png">
                 </div>
-                <div class="flex flex-col justify-center w-1/2 h-full gap-4">
+                <div class="flex flex-col justify-center sm:w-1/2 h-full gap-4">
                     <div class="text-red-400">Web Design & Development</div>
                     <div id="w_tab3" class="text-4xl text-white font-bold">🎉Birthday Surprise Page</div>
                     <div class="text-lg">This site was built as a personal gift for my father’s birthday, themed design elements, combining design and heartfelt content to create a meaningful web experience.</div>
@@ -150,13 +153,13 @@
                 </div>
             </div>
         </div>
-        <div id="skills" class="flex flex-col gap-6 items-center bg-neutral-900 h-[750px] w-full text-gray-600">
+        <div id="skills" class="flex flex-col gap-6 items-center bg-neutral-900 sm:h-[750px] h-[1450px] w-full text-gray-600">
             <div class="text-red-400 mt-[80px] text-base">MY SkillS</div>
-            <div id="s_title" class="text-5xl text-center w-3/5 font-bold text-white">Tools & <span class="italic font-semibold font-serif">Technologies</span></div>
-            <div class="text-xl">I enjoy building responsive websites and continuously improving my technical and problem-solving skills.</div>
-            <div class="grid grid-cols-2 grid-rows-3 w-4/5 gap-6">
+            <div id="s_title" class="text-5xl text-center sm:w-3/5 font-bold text-white">Tools & <span class="italic font-semibold font-serif">Technologies</span></div>
+            <div class="text-xl sm:w-full w-[90%] text-center">I enjoy building responsive websites and continuously improving my technical and problem-solving skills.</div>
+            <div class="grid sm:grid-cols-2 sm:grid-rows-3 grid-cols-1 grid-rows-6 w-4/5 gap-6">
                 <div class="flex flex-col gap-2">
-                    <div class="flex gap-96 w-full">
+                    <div class="flex sm:gap-96 gap-[72%] w-full">
                         <div id="s_t1" class="text-lg text-white">HTML5</div>
                         <div>90%</div>
                     </div>
@@ -166,7 +169,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex gap-96 w-full">
+                    <div class="flex sm:gap-96 gap-[75%] w-full">
                         <div id="s_t2" class="text-lg text-white">CSS3</div>
                         <div>85%</div>
                     </div>
@@ -176,7 +179,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex gap-[340px] w-full">
+                    <div class="flex sm:gap-[340px] gap-[60%] w-full">
                         <div id="s_t3" class="text-lg text-white">Tailwind CSS</div>
                         <div>70%</div>
                     </div>
@@ -186,7 +189,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex gap-96 w-full">
+                    <div class="flex sm:gap-96 gap-[76%] w-full">
                         <div id="s_t4" class="text-lg text-white">SQL </div>
                         <div>95%</div>
                     </div>
@@ -196,7 +199,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex gap-[67%] w-full">
+                    <div class="flex sm:gap-[67%] gap-[60%] w-full">
                         <div id="s_t5" class="text-lg text-white">Git & GitHub</div>
                         <div>80%</div>
                     </div>
@@ -206,7 +209,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex gap-[70%] w-full">
+                    <div class="flex sm:gap-[70%] gap-[66%] w-full">
                         <div id="s_t6" class="text-lg text-white">Bootstrap</div>
                         <div>75%</div>
                     </div>
@@ -216,8 +219,8 @@
                     </div>
                 </div>
             </div>
-            <div id="s_title2" class="text-2xl text-white p-8">Skills And Languages I’m Learning & Using</div>
-            <div class="flex  flex-wrap h-200px w-[75%] gap-2 justify-center">
+            <div id="s_title2" class="text-2xl text-white p-8 text-center">Skills And Languages I’m Learning & Using</div>
+            <div class="flex  flex-wrap h-200px sm:w-[75%] w-[90%] gap-2 justify-center">
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[80px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">HTML5</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[80px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">CSS3</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[150px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Tailwind CSS</div>
@@ -234,11 +237,11 @@
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">SQL</div>
             </div>
         </div>
-        <div id="contact" class="flex flex-col gap-6 items-center bg-black h-[850px] w-full text-gray-600">
+        <div id="contact" class="flex flex-col gap-6 items-center bg-black sm:h-[850px] h-[1350px] w-full text-gray-600">
             <div class="text-red-400 mt-[80px] text-base">Get In Touch</div>
-            <div id="c_title" class="text-5xl text-center w-3/5 font-bold text-white">Let's Work <span class="italic font-semibold font-serif">Together </span></div>
-            <div class="text-xl w-3/5 tracking-wide text-center">Have a project in mind? I'd love to hear from you. Send me a message and let's create something amazing.</div>
-            <div class="flex w-[85%] justify-between flex-wrap">
+            <div id="c_title" class="text-4xl sm:text-5xl text-center sm:w-3/5 font-bold text-white">Let's Work <span class="italic font-semibold font-serif">Together </span></div>
+            <div class="text-xl sm:w-3/5 tracking-wide text-center">Have a project in mind? I'd love to hear from you. Send me a message and let's create something amazing.</div>
+            <div class="flex sm:flex-row flex-col w-[85%] justify-between gap-4">
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-6">
                         <div class="flex gap-4">
@@ -263,13 +266,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="border border-zinc-600 rounded-3xl bg-neutral-900 h-[125px] w-[400px] p-6 text-gray-400">
+                    <div class="border border-zinc-600 rounded-3xl bg-neutral-900 h-[125px] sm:w-[400px] p-6 text-gray-400">
                         <div class="text-white text-lg flex gap-2 items-center"><i class="fa-solid fa-paw text-blue-500"></i> Available for Work</div>
                         <div>I'm currently taking on new projects. Let's discuss how I can help you.</div>
                     </div>
                 </div>    
-                <form class="w-[55%] bg-neutral-900 border border-zinc-600 rounded-3xl flex flex-wrap flex-col p-8 gap-6">
-                    <div class="flex gap-4 justify-between w-full">
+                <form class="sm:w-[55%] bg-neutral-900 border border-zinc-600 rounded-3xl flex flex-wrap flex-col p-8 gap-6">
+                    <div class="flex sm:flex-row flex-col gap-4 justify-between w-full">
                         <div class="flex flex-col gap-2">
                             <label  class="text-white" for="1">Your Name</label>
                             <input  class="h-[50px] w-[250px] p-4 bg-black border border-zinc-600 rounded-xl" id="1" type="text" placeholder="John Doe">
@@ -291,7 +294,7 @@
                 </form>
             </div>
         </div>
-        <footer class="h-[100px]  border-t border-t-gray-500 flex px-12 justify-between items-center">
+        <footer class="sm:h-[100px] h-[200px] w-screen border-t border-t-gray-500 flex sm:flex-row flex-col px-12 sm:justify-between justify-around items-center">
             <div id="title_end" class="flex text-2xl font-semibold font-sans subpixel-antialiased text-white">Port<span class="text-red-400">folio</span></div>
             <div id="icon2" class="flex gap-4 text-white">
                 <a href="https://github.com/mansee-11" target="_blank">
@@ -301,7 +304,8 @@
                     <button id="icon2" class="rounded-full h-[45px] w-[45px] border border-gray-600 hover:duration-300 hover:border-red-400 hover:text-red-400"><i class="fa-brands fa-linkedin-in text-xl"></i></button>
                 </a>
             </div>
-            <div class="text-gray-600 w-[150px] text-center hover:text-red-400">
+            <div class="text-gray-600 sm:w-[150px] text-center hover:text-red-400">
+                <span class="sm:hidden inline">© 2026</span>
                Mansee Asati Student Portfolio
             </div>
         </footer>
