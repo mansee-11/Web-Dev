@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(a) //will give undefine as value of a
+        var a=5
+
+        // console.log(b)  //will give reference error      let and const work same
+        // let b=10
+
+        // sum()
+        // var sum=()=>{  //will give error sum is not a function
+        //     print(5+10)  
+        // }
+
+        // sume()      //will give reference error
+        // let sume=()=>{
+        //     print(5+10)
+        // }
+
+        let arr=[1,2,3,4,5]
+        console.log(arr.length);
+        arr.push(6)
+        console.log(arr)
+        arr.pop()
+        console.log(arr)
+        arr.unshift(0) //add at first
+        console.log(arr)
+        arr.shift()  //remove from first
+        console.log(arr)
+        console.log(arr.includes(11))
+        console.log(arr.indexOf(10))
+        
+        let data=arr.find(function(a)
+        {
+            return a==5
+        })
+
+        let data2=arr.find((a)=>{
+            return a==5
+        })
+
+        arr.forEach((a,b,c)=>{
+            console.log(a,b,c) //a=element b=index c=whole array
+        })
+
+        arr.forEach(function(a,b,c){
+            console.log(a,b,c)
+        })
+        
+        let val=arr.forEach((a)=>{
+            return a
+        })
+        console.log(a) //undefined foreach work on same array do not create new so not return anything
+        
+        let arr1=arr.map((a,b,c)=>{
+            return a*2
+        })
+        console.log(arr1)
+
+        arr1=arr.map((a,b,c)=>{
+            return a<2
+        })
+        console.log(arr1) //array of true or false based on  condition 
+
+        let filterv = arr.filter((a,b,c)=>{
+            return a>2
+        })
+        console.log(filterv) //array of num greter then 2
+
+        let sum=arr.reduce((a,b,c,d)=>{
+            console.log(a)
+            return a+b
+        })
+        console.log(sum)
+
+        sum=arr.reduce((a,b,c,d)=>{
+            console.log(a)
+            return a+b
+        },10)   //giving default value as 10 for a
+        console.log(sum)
+
+        let ar=[1,2,3,5,53,6,3,6,55,2]
+        ar = ar.filter((a)=>{
+            return a>2
+        })
+
+        ar=ar.filter((a)=>{
+            return a%2==0
+        })
+
+        ar=ar.reduce((a,b)=>{
+            return a+b
+        })
+
+        console.log(ar)
+    </script>
+</body>
+</html>
