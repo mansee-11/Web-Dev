@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    }
+
+    .calculator {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    }
+
+    #display {
+    width: 95%;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: right;
+    padding: 5px;
+    }
+
+    .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+    }
+
+    button {
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+    cursor: pointer;
+    }
+
+    button:hover {
+    background: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input id="display">
+    <div class="buttons">
+      <button>C</button>
+      <button>**</button>
+      <button>%</button>
+      <button>/</button>
+
+      <button >7</button>
+      <button >8</button>
+      <button >9</button>
+      <button>*</button>
+
+      <button >4</button>
+      <button >5</button>
+      <button >6</button>
+      <button>-</button>
+      
+      <button >1</button>
+      <button >2</button>
+      <button >3</button>
+      <button >+</button>
+      
+      <button >0</button>
+      <button >.</button>
+      <button >=</button>
+      <button>del</button>
+    </div>
+  </div>
+  <script src="calc.js"></script>
+</body>
+</html>
