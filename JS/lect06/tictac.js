@@ -4,6 +4,7 @@ let msgBox=document.querySelector("#msg")
 let reset=document.querySelector("#reset")
 let win=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 reset.addEventListener("click",()=>{
+    draw.innerText=""
     for(let a of box)
     {
         a.innerText=""
@@ -16,14 +17,13 @@ for(let a of box){
             a.innerText='0'
             turn0=false
             a.disabled=true
-            winner()
         }
         else{
             a.innerText='x'
             turn0=true
             a.disabled=true
-            winner()
         }
+        winner()
     })
 }
 
@@ -38,8 +38,6 @@ function winner(){
             {
                 msgBox.innerText= x +" "+" app jeet gayeeeeeee"
             }
-            
         }
     }
 }
-        
