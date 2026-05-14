@@ -7,6 +7,34 @@
 </head>
 <body>
     <script>
+        //normally work will be done first which time is done in less time
+        // function step1()
+        // {
+        //     setTimeout(() => {
+        //         console.log("picccc selected")
+        //     }, 5000);
+        // }
+        // function step2()
+        // {
+        //     setTimeout(() => {
+        //         console.log("caption added")
+        //     }, 4000);
+        // }function step3()
+        // {
+        //     setTimeout(() => {
+        //         console.log("song added")
+        //     }, 3000);
+        // }function step4()
+        // {
+        //     setTimeout(() => {
+        //         console.log("posteddddd")
+        //     }, 2000);
+        // }
+        // step1()
+        // step2()
+        // step3()
+        // step4()
+
         function step1(fn)
         {
             setTimeout(() => {
@@ -32,11 +60,6 @@
                 console.log("posteddddd")
             }, 2000);
         }
-        // step1()
-        // step2()
-        // step3()
-        // step4()
-
         step1(function(){
             step2(function(){
                 step3(function(){
