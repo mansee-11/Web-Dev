@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100 vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 500px;
+            height:400px;
+            border: solid black 2px;
+            box-shadow: 0 0 20px rgb(1, 0, 14);
+            border-radius: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <img src="">
+    <script>
+        // let promise = new Promise((resolve,reject)=>{
+        //     // resolve() //promise resolved
+        //     // reject() //pomise rejected
+        //     //if pass nothing then pending condition
+
+
+        //     setTimeout(()=>{     //resolve but after pending for given time
+        //         resolve()
+        //     },3000)   
+        // })
+        // console.log(promise)
+
+        // promise.then(()=>{
+        //     console.log("done")
+        // })
+        // promise.catch(()=>{
+        //     console.log("sorry")
+        // })
+
+
+        // function step1()
+        // {
+        //     return new Promise((res,rej)=>{
+        //         setTimeout(() => {
+        //             console.log("picccc selected")
+        //             res()
+        //         }, 5000);
+        //     })
+        // }
+        // function step2()
+        // {
+        //     return new Promise((res,rej)=>{
+        //         setTimeout(() => {
+        //             console.log("caption added")
+        //             res()
+        //         }, 4000);
+        //     })
+        // }
+        // function step3()
+        // {
+        //     return new Promise((res,rej)=>{
+        //         setTimeout(() => {
+        //             console.log("song added")
+        //             res()
+        //         }, 3000);
+        //     })
+        // }
+        // function step4()
+        // {
+        //     return new Promise((res,rej)=>{
+        //         setTimeout(() => {
+        //         console.log("posteddddd")
+        //         res()
+        //     }, 2000);
+        //     })
+        // }
+
+        // // step1().then(()=>{       callig by promises
+        // //     step2().then(()=>{
+        // //         step3().then(()=>{
+        // //             step4().then(()=>{
+
+        // //             })
+        // //         })
+        // //     })
+        // // })
+
+        // //calling by async & await
+        // async function call(){
+        //     await step1()
+        //     await step2()
+        //     await step3()
+        //     await step4()
+        // }
+        // call()
+
+
+        //image generation change
+        let arr=["https://plus.unsplash.com/premium_photo-1725597443913-41027ae706bc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1778272068422-cf918532a9af?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1778225402658-e96f1f45df55?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1777175513145-df96434822a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1676400614009-3b230ef8be6d?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ]      
+        let imgEl=document.querySelector('img')
+        let num=0;
+        setInterval(function(){
+            imgEl.setAttribute("src",arr[num]);
+            num=(num+1)%arr.length;
+        },500)
+    </script>
+</body>
+</html>
