@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(135deg,rgb(115, 227, 225),rgb(26, 45, 184));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main{
+            margin: 50px auto;
+            height: 300px;
+            width: 300px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgb(1, 0, 14);
+            gap: 10px;
+        }
+        #main div{
+            margin: 0px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        input{
+            width: 90%;
+            margin: 0px auto;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            border: 0px;
+            height: 30px;
+            width: 150px;
+            border-radius: 7px;
+            margin: 0px auto;
+            cursor: pointer;
+        }
+        h2{
+            text-align: center;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h2>🌦️Get Weather Details</h2>
+        <input id="cityin">
+        <button onclick="gettemp()">Get Weather</button>
+        <div>
+            <div id="city">City: </div>
+            <div id="temp">Temp: </div>
+            <div id="weather">Weather: </div>
+            <div id="wind">Wind: </div>
+            <div id="visibility">visibility: </div>
+            <div id="srise">Sunrise: </div>
+            <div id="sset">Sunset: </div>
+        </div>
+    </div>
+    <script >
+        function gettemp(){
+            
+            let c=document.getElementById("cityin").value
+            let apiK='9f6290d6cda9a36a63755fadee71f83d'
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${c}&appid=${apiK}`).then((data)=>{
+                return data.json()
+
+            }).then((info)=>{
+                document.getElementById("city").innerText =
+                "City : " + info.name+"📍";
+
+                document.getElementById("temp").innerText =
+                "Temp : " + (info.main.temp -273).toFixed(2)+" C";
+
+                document.getElementById("weather").innerText =
+                "Weather : " + info.weather[0].main;
+
+                document.getElementById("wind").innerText =
+                "Wind : " + info.wind.speed +" m/s🍃";
+                
+                document.getElementById("visibility").innerText =
+                "visibility: " + (info.visibility/1000)+" km";
+
+                document.getElementById("srise").innerText =
+                "Sunrise: " +new Date( info.sys.sunrise *1000).toLocaleTimeString()+" 🌅";
+
+                document.getElementById("sset").innerText =
+                "Sunset: " +new Date( info.sys.sunset* 1000).toLocaleTimeString()+" 🌇";
+                console.log(info)
+            })
+        }
+    </script>
+</body>
+</html>
