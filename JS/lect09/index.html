@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            background: linear-gradient(135deg,rgb(134, 93, 88),rgb(75, 53, 50));
+            /* background: linear-gradient(135deg,rgb(72, 200, 228),rgb(18, 40, 117)); */
+        }
+        fieldset{
+            background-color: white;
+            border: solid black 2px;
+            margin: 50px auto;
+            width: 400px;
+            border-radius: 10px;
+            font-size: 24px;
+            box-shadow: 0 0 20px rgb(1, 0, 14);
+        }
+        input{
+            font-size: 24px;
+        }
+        #add_detail{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <ledend>SignUp</ledend>
+        <form id="form">
+                <br/>
+                <label for="1">Name:</label>
+                <br/>
+                <input id="1" type="text" placeholder="Enter your name">
+                <br/>
+                <br/>
+                <label for="2">Email address</label>
+                <br/>
+                <input id="2" type="email" placeholder="xyz@gmail.com">
+                <br/>
+                <br/>
+                <span>Mob. No.</span>
+                <br/>
+                <input type="number" placeholder="Enter your mob. no."/>
+                <br/>
+                <br/>
+                <label for="4">Password:</label>
+                <br/>
+                <input id="4" type="password" placeholder="Atleast 8 char">
+                <br/>
+                <button type="submit">Submit</button>
+            </form>
+        </fieldset>
+        <!-- <div id="add_detail">
+            <h2 >NAME: </h2>
+            <h2 id="n"></h2>
+            <h2 >EMAIL: </h2>
+            <h2 id="e"></h2>
+            <h2 >MOB: </h2>
+            <h2 id="m"></h2>
+            <h2 >PASS: </h2>
+            <h2 id="p"></h2>
+            <button id="remove"> Remove Data</button>
+        </div> -->
+        <fieldset>
+        <ledend>Login</ledend>
+        <form id="login">
+                <br/>
+                <label for="a">Email address</label>
+                <br/>
+                <input id="a" type="email" placeholder="xyz@gmail.com">
+                <br/>
+                <br/>
+                <label for="b">Password:</label>
+                <br/>
+                <input id="b" type="password" placeholder="Atleast 8 char">
+                <br/>
+                <br/>
+                <button type="submit">Submit</button>
+            </form>
+        </fieldset>
+    <script src="index.js"></script>
+</body>
+</html>
