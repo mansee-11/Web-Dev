@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            background: linear-gradient(135deg,rgb(115, 227, 225),rgb(26, 45, 184));
+            height: 100vh;
+            
+        }
+        #main{
+            background-color: white;
+            border-radius: 20px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin: 0px auto;
+        }
+        #main div{
+            width: 90%;
+        }
+        h2{
+            text-align: center;
+        }
+        #ts{
+            background-color: rgb(130, 187, 202);
+            border-radius: 7px;
+            display: flex;
+            height: 40px;
+            font-size: 24px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #ts span{
+            color: blue;
+        }
+        #select{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #select button{
+            height: 40px;
+            border-radius: 7px;
+            border: solid gray;
+            cursor: pointer;
+        }
+        #select button:hover{
+            background-color: rgb(137, 199, 244);
+        }
+        #next{
+            width: 90%;
+            height: 40px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            background-color: rgb(26, 26, 203);
+            border: 0px;
+            color: white;
+            border-radius: 7px;
+            cursor: pointer;
+        } */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            background: #fff;
+            width: 100%;
+            max-width: 550px;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        /* ===== Top Bar (Score + Timer) ===== */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 12px 15px;
+            background: #f0f4ff;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+
+        .timer {
+            color: #e74c3c;
+        }
+
+        /* ===== Question Section ===== */
+        .question-num {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .question {
+            font-size: 19px;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            min-height: 60px;
+        }
+
+        /* ===== Options ===== */
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            padding: 14px 18px;
+            background: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            text-align: left;
+            transition: all 0.3s;
+            color: #333;
+        }
+
+        .option:hover:not(:disabled) {
+            background: #e8eeff;
+            border-color: #2a5298;
+            transform: translateX(5px);
+        }
+
+        .option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+
+        .option.wrong {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+
+        .option:disabled {
+            cursor: not-allowed;
+        }
+
+        /* ===== Next Button ===== */
+        #nextBtn {
+            width: 100%;
+            padding: 13px;
+            background: #2a5298;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #nextBtn:hover {
+            background: #1e3c72;
+        }
+
+        #nextBtn:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+
+        /* ===== Result Screen ===== */
+        .result {
+            text-align: center;
+        }
+
+        .result h2 {
+            color: #2a5298;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .result .final-score {
+            font-size: 48px;
+            color: #1e3c72;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .result p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        #restartBtn {
+            padding: 12px 30px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #restartBtn:hover {
+            background: #218838;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="main">
+        <h2>🧠 Quiz Time</h2>
+        <div id="ts">
+            <span>Score:<span id="Score">0</span></span>
+            <span><span id="timer">15</span>s</span>
+        </div>
+        <div>
+            <div id="questionNum">Question 1 to 5</div>
+            <h3 id="question">HTML ka full form kya hai???</h3>
+        </div>
+        <div class="options" id="select"></div>
+        <button id="next">Next Question</button>
+    </div> -->
+    <div class="quiz-container">
+    <h1>🧠 Quiz Time!</h1>
+
+    <div id="quizScreen">
+        <div class="top-bar">
+            <span>Score: <span id="score">0</span></span>
+            <span class="timer">⏱ <span id="timer">15</span>s</span>
+        </div>
+
+        <p class="question-num" id="questionNum">Question 1 of 5</p>
+        <h2 class="question" id="question"></h2>
+
+        <div class="options" id="options"></div>
+
+        <button id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
+    </div>
+
+    <!-- //on latter -->
+    <div id="resultScreen" class="result hide">
+        <h2>🎉 Quiz Complete!</h2>
+        <div class="final-score" id="finalScore">0 / 5</div>
+            <p id="resultMsg"></p>
+            <button id="restartBtn" onclick="restartQuiz()">Play Again</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
