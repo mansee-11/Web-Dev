@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let body= document.querySelector("body")
+        let data= JSON.parse(localStorage.getItem("item")) 
+        data.map((a)=>{
+            console.log(a)
+        body.innerHTML+=`<div Style="border:1px solid black;
+            padding:20px;
+            margin:20px;
+            width:300px;
+            border-radius:21px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+            ">
+            <img src="${a.images[0]}" width="100px">
+            <h2> ${a.title}</h2>
+            <h2> ${a.brand}</h2>
+            <h2>${a.price}$</h2>
+        </div>`
+        
+    })
+    </script>
+</body>
+</html>
