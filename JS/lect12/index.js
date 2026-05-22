@@ -87,6 +87,5 @@ $("#FadeOut").click(()=>{
 })
 
 $("#FadeToggle").click(()=>{
-    if($("div").fadeIn()) $("div").fadeOut()
-    else  $("div").fadeIn()    
+    $("div").fadeToggle()   
 })
