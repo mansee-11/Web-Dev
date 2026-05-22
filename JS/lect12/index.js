@@ -38,40 +38,40 @@
 
 // console.log(add(9)(1)(5)(7)()) 
 
-let arr=[2,3,4];
-let nums=[...arr,1,5,6];
-// let ans=nums.concat(arr)
-console.log(arr)
-console.log(nums)
+// let arr=[2,3,4];
+// let nums=[...arr,1,5,6];
+// // let ans=nums.concat(arr)
+// console.log(arr)
+// console.log(nums)
 
-let obj={
-    id:11,
-    name:"mansee"
-}
-console.log(obj)
+// let obj={
+//     id:11,
+//     name:"mansee"
+// }
+// console.log(obj)
 
-let obj1={
-    ...obj,
-    age:19
-}
-console.log(obj1)
+// let obj1={
+//     ...obj,
+//     age:19
+// }
+// console.log(obj1)
 
-function sum(a,b,c,...nums){
-    console.log(nums);
-}
-sum(1,2,3,4,5,6,7,8,9)
+// function sum(a,b,c,...nums){
+//     console.log(nums);
+// }
+// sum(1,2,3,4,5,6,7,8,9)
 
-// let arr1=[1,2,3,4,5]
-// let [c,b,a]=arr1 not possible
-// console.log(arr1) 
+// // let arr1=[1,2,3,4,5]
+// // let [c,b,a]=arr1 not possible
+// // console.log(arr1) 
 
-let obj2={
-    id:1,
-    name:"mansee"
-}
+// let obj2={
+//     id:1,
+//     name:"mansee"
+// }
 
-let {id,name}=obj
-console.log(obj)
+// let {id,name}=obj
+// console.log(obj)
 
 // let h1= document.querySelector("h1")
 // h1.innerText="hello"
@@ -79,3 +79,14 @@ console.log(obj)
 //using jquery
 
 $("h1").text("hiii").css("color","red")
+$("#FadeIn").click(()=>{
+    $("div").fadeOut()
+})
+$("#FadeOut").click(()=>{
+    $("div").fadeIn()
+})
+
+$("#FadeToggle").click(()=>{
+    if($("div").fadeIn()) $("div").fadeOut()
+    else  $("div").fadeIn()    
+})
