@@ -1,3 +1,5 @@
+//lect15
+
 import React from 'react'
 
 const College = ({a}) => {

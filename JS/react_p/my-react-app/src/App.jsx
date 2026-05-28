@@ -1,3 +1,5 @@
+//lect14
+
 // import React from 'react'
 // import { useState } from 'react'
 // let count=0
@@ -31,16 +33,59 @@
 
 // export default App
 
-import React from 'react'
-import Home from './Home'
-import {New} from './Home'
 
-const App= () => {
-  let user="mansee"
+//lect15
+
+// import React from 'react'
+// import Home from './Home'
+// import {New} from './Home'
+
+// const App= () => {
+//   let user="mansee"
+//   return (
+//     <div><Home data={user}/>
+//       <New/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//lect16
+
+// import React, { useState } from 'react'
+
+// const App = () => {
+//   let [input,SetInput] = useState("")
+//   let[data,SetData]=useState([])
+//   function fun1(e){
+//     SetInput(e.target.value)
+//     // console.log(input)
+//     // console.log(e.target.value)
+//   }
+//   function fun2()
+//   {
+//     // SetData(input)
+//     console.log(data)
+//   }
+//   return (
+//     <div>
+//       <h2>{data}</h2>
+//       <input type='text' placeholder='Enter your name' onChange={fun1}/>
+//       <button onClick={fun2}>click</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+import React from 'react'
+import Form from './form'
+import './App.css'
+const App = () => {
   return (
-    <div><Home data={user}/>
-      <New/>
-    </div>
+    <div><Form/></div>
   )
 }
 

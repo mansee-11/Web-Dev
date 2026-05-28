@@ -1,3 +1,5 @@
+//lect15
+
 import React from 'react'
 import College from './College'
 const Home = ({data}) => {      //or by taking normal varialble ex- a
