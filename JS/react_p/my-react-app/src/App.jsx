@@ -333,16 +333,16 @@
 // export default App
 
 
-// import React from 'react'
-// import Shop from './Shop'
+import React from 'react'
+import Shop from './Shop'
 
-// const App = () => {
-//   return (
-//     <div><Shop/></div>
-//   )
-// }
+const App = () => {
+  return (
+    <div><Shop/></div>
+  )
+}
 
-// export default App
+export default App
 
 
 //lect 27
@@ -358,13 +358,13 @@
 // export default App
 
 
-import React from 'react'
-import ChatBot from './ChatBot'
+// import React from 'react'
+// import ChatBot from './ChatBot'
 
-const App = () => {
-  return (
-    <div><ChatBot/></div>
-  )
-}
+// const App = () => {
+//   return (
+//     <div><ChatBot/></div>
+//   )
+// }
 
-export default App
+// export default App
