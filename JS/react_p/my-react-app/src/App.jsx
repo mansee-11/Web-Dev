@@ -92,14 +92,29 @@
 // export default App
 
 
-//lect17
+// //lect17
+
+// import React from 'react'
+// import Lect17 from './Lect17'
+// import './App.css'
+// const App = () => {
+//   return (
+//     <div><Lect17/></div>
+//   )
+// }
+
+// export default App
+
+
+//lect 18
+
 
 import React from 'react'
-import Lect17 from './Lect17'
+import Lect18 from './Lect18'
 import './App.css'
 const App = () => {
   return (
-    <div><Lect17/></div>
+    <div><Lect18/></div>
   )
 }
 

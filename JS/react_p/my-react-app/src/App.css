@@ -52,7 +52,7 @@ button:hover{
   gap: 20px;
 }
 #child{
-  height: 500px;
+  height: 550px;
   width: 350px;
   background-color: rgb(219, 227, 230);
   border-radius: 21px;
@@ -81,6 +81,7 @@ button{
   background-color: gold;
   border-radius: 11px;
   border: 0px;
-  height: 50px;
+  height: 40px;
   width: 100px;
+  margin: 10px auto;
 }
