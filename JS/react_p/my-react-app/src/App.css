@@ -1,4 +1,6 @@
-div{
+/*lect16*/
+
+/* div{
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,7 +16,6 @@ form{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 input{
@@ -39,7 +40,47 @@ button{
   transition: 0.5s;
 }
 button:hover{
-  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
   box-shadow: rgba(0, 0, 0, 0.713) 0px 2px 4px, rgba(0, 0, 0, 0.551) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   transform: scale(1.25) translateY(-10px);
+} */
+
+/*lect17*/
+
+#parent{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#child{
+  height: 500px;
+  width: 350px;
+  background-color: rgb(219, 227, 230);
+  border-radius: 21px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  /* background-color: rgba(0, 136, 255, 0.292); */
+  /* border-radius: 21px; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+img{
+  height: 50%;
+  width:70%;
+}
+#details{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 95%;
+  gap: 0px;
+}
+button{
+  background-color: gold;
+  border-radius: 11px;
+  border: 0px;
+  height: 50px;
+  width: 100px;
 }

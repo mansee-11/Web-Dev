@@ -80,12 +80,26 @@
 // export default App
 
 
+// import React from 'react'
+// import Form from './form'
+// import './App.css'
+// const App = () => {
+//   return (
+//     <div><Form/></div>
+//   )
+// }
+
+// export default App
+
+
+//lect17
+
 import React from 'react'
-import Form from './form'
+import Lect17 from './Lect17'
 import './App.css'
 const App = () => {
   return (
-    <div><Form/></div>
+    <div><Lect17/></div>
   )
 }
 
