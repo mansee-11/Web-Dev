@@ -109,12 +109,37 @@
 //lect 18
 
 
+// import React from 'react'
+// import Lect18 from './Lect18'
+// import './App.css'
+// const App = () => {
+//   return (
+//     <div><Lect18/></div>
+//   )
+// }
+
+// export default App
+
+
+//lect 19
+
 import React from 'react'
-import Lect18 from './Lect18'
+import Lect19 from './Lect19'
+import Home from './Home'
+import College from './College'
+import Form from './form'
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
 const App = () => {
   return (
-    <div><Lect18/></div>
+    <div>
+      <Lect19/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/college' element={<College/>}/>
+        <Route path='/login' element={<Form/>}/>
+      </Routes>
+    </div>
   )
 }
 
