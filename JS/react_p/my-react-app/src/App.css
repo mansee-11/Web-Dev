@@ -85,7 +85,7 @@ button:hover{
 
 /* lext 19 */
 
-#nav{
+/* #nav{
   height: 50px;
   background-color: black;
   display: flex;
@@ -96,4 +96,62 @@ button:hover{
 *{
   margin: 0;
   padding: 0;
+} */
+
+/* lect 20 */
+
+#parent{
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+#card{
+  height: 100px;
+  width: 500px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 21px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button{
+  background-color: gold;
+  height: 40px;
+  width: 100px;
+  font-size: 24px;
+  border-radius: 11px;
+  border: 0px;
+  cursor: pointer;
+}
+input{
+  font-size: 24px;
+  height: 35px;
+}
+#task{
+  border: 1px solid black;
+  display: flex;
+  gap: 20px;
+  width: 500px;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 11px;
+}
+#task button{
+  height: 35px;
+  background-color: darkblue;
+  color: white;
+}
+span{
+  font-size: 32px;
+}
+#tasks{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
