@@ -100,7 +100,7 @@ button:hover{
 
 /* lect 20 */
 
-#parent{
+/* #parent{
   margin: 50px auto;
   display: flex;
   justify-content: center;
@@ -154,4 +154,5 @@ span{
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
+} */
+

@@ -148,12 +148,25 @@
 
 //lect20
 
+// import React from 'react'
+// import Todo from './Todo'
+// import './App.css'
+// const App = () => {
+//   return (
+//     <div><Todo/></div>
+//   )
+// }
+
+// export default App
+
+
+//lect 21
+
 import React from 'react'
-import Todo from './Todo'
-import './App.css'
+import Lect21 from './Lect21'
 const App = () => {
   return (
-    <div><Todo/></div>
+    <div><Lect21/></div>
   )
 }
 
