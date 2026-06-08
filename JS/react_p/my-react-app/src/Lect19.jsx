@@ -1,6 +1,6 @@
 import React from 'react'
-import College from './College'
-import Form from './form'
+import Cart from './Cart'
+import Form from './Form'
 import { Link } from 'react-router-dom'
 const Lect19 = () => {
   return (
@@ -11,8 +11,8 @@ const Lect19 = () => {
         <Link to={'/Form'}>
             <li>Login</li>
         </Link>
-        <Link to={'/College'}>
-        <li>College</li>
+        <Link to={'/Cart'}>
+        <li>Cart</li>
         </Link>
     </div>
   )

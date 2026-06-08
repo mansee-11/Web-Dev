@@ -50,8 +50,8 @@ button:hover{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-} */
-/* #child{
+}
+#child{
   height: 550px;
   width: 350px;
   background-color: rgb(219, 227, 230);
@@ -62,19 +62,19 @@ button:hover{
   justify-content: center;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-} */
-/* img{
+}
+img{
   height: 50%;
   width:70%;
-} */
-/* #details{
+}
+#details{
   display: flex;
   flex-direction: column;
   height: 200px;
   width: 95%;
   gap: 0px;
-} */
-/* button{
+}
+button{
   background-color: gold;
   border-radius: 11px;
   border: 0px;
@@ -100,7 +100,7 @@ button:hover{
 
 /* lect 20 */
 
-#parent{
+/* #parent{
   margin: 50px auto;
   display: flex;
   justify-content: center;
@@ -154,4 +154,68 @@ span{
   display: flex;
   flex-direction: column;
   gap: 10px;
+} */
+
+/* lect19 */
+
+/* #nav{
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+*{
+  margin: 0;
+  padding: 0;
+} */
+/* lect22 */
+#nav{
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+#parent{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#child{
+  height: 550px;
+  width: 350px;
+  background-color: rgb(219, 227, 230);
+  border-radius: 21px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+img{
+  height: 50%;
+  width:70%;
+}
+#details{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 95%;
+  gap: 0px;
+}
+button{
+  background-color: gold;
+  border-radius: 11px;
+  border: 0px;
+  height: 40px;
+  width: 100px;
+  margin: 10px auto;
 }
