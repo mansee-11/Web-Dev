@@ -1,10 +1,25 @@
 //lect15
 
-import React from 'react'
+// import React from 'react'
 
-const College = ({a}) => {
+// const College = ({a}) => {
+//   return (
+//     <div>College {a}</div>
+//   )
+// }
+
+// export default College
+
+//lect 22
+
+import React, { useContext } from 'react'
+import Context from './Context'
+
+const College = () => {
+  let data =useContext(Context)
+
   return (
-    <div>College {a}</div>
+    <div>{data}</div>
   )
 }
 

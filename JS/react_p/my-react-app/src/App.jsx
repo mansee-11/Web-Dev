@@ -148,16 +148,16 @@
 
 //lect20
 
-import React from 'react'
-import Todo from './Todo'
-import './App.css'
-const App = () => {
-  return (
-    <div><Todo/></div>
-  )
-}
+// import React from 'react'
+// import Todo from './Todo'
+// import './App.css'
+// const App = () => {
+//   return (
+//     <div><Todo/></div>
+//   )
+// }
 
-export default App
+// export default App
 
 
 //lect 21
@@ -171,3 +171,45 @@ export default App
 // }
 
 // export default App
+
+
+//lect22
+// main-> app-> home-> college
+
+// import React from 'react'
+// import Home from './Home'
+// const App = () => {
+//   return (
+//     <div><Home/></div>
+//   )
+// }
+
+// export default App
+
+
+import React, { useState , useEffect} from 'react'
+import { Routes , Route} from 'react-router-dom'
+
+
+import Lect19 from './Lect19'
+import Home from './Home'
+import Cart from './Cart'
+import Form from './Form'
+import './App.css'
+
+const App = () => {
+  let [apiData,SetApiData] =   useState([])
+  let [cart,SetCart]= useState([])
+  return (
+    <div>
+      <Lect19/>
+      <Routes>
+        <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
+        <Route path="/form"/>
+        <Route path="/cart" element={<Cart cart={cart}/>}/>
+      </Routes>
+    </div>
+  )
+}
+
+export default App

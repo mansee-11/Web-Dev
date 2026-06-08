@@ -11,3 +11,11 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>,
 )
+// import Context from './Context.jsx'
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <Context.Provider value='mansee'>
+//       <App />
+//     </Context.Provider>
+//   </StrictMode>,
+// )
