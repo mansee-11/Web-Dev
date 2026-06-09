@@ -100,7 +100,7 @@ button{
 
 /* lect 20 */
 
-/* #parent{
+ #parent{
   margin: 50px auto;
   display: flex;
   justify-content: center;
@@ -154,7 +154,7 @@ span{
   display: flex;
   flex-direction: column;
   gap: 10px;
-} */
+}
 
 /* lect19 */
 
@@ -171,7 +171,8 @@ span{
   padding: 0;
 } */
 /* lect22 */
-#nav{
+
+/* #nav{
   height: 50px;
   background-color: black;
   display: flex;
@@ -218,4 +219,4 @@ button{
   height: 40px;
   width: 100px;
   margin: 10px auto;
-}
+} */
