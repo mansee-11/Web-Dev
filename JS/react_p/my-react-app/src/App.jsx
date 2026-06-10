@@ -217,12 +217,23 @@
 
 //lect23
 
+// import React from 'react'
+// import Todo from './Todo'
+// import './App.css'
+// const App = () => {
+//   return (
+//     <div><Todo/></div>
+//   )
+// }
+
+// export default App
+
 import React from 'react'
-import Todo from './Todo'
+import Task from './task'
 import './App.css'
 const App = () => {
   return (
-    <div><Todo/></div>
+    <div><Task/></div>
   )
 }
 

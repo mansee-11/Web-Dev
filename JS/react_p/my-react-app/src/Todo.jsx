@@ -228,88 +228,127 @@
 // export default Todo
 
 
-import React, { useReducer } from 'react'
+// import React, { useReducer } from 'react'
+
+// const Todo = () => {
+//     let initial={
+//         input:"",
+//         todos:[],
+//         index:null
+//     }
+// function red(state,action){
+//     if(action.type=="write")
+//     {
+//         return{
+//             ...state,input:action.payload
+//         }
+//     }
+//     else if(action.type=="add")
+//     {
+//         return{
+//             ...state,
+//             todos:[...state.todos,state.input],
+//             input:""
+//         }
+//     }
+//     else if(action.type=="del")
+//     {
+//         return{
+//             ...state,
+//             todos:state.todos.filter((a,b)=>{
+//                 return b!=action.payload
+//             })
+//         }
+//     }
+//     else if(action.type=="edit")
+//     {
+//         return{
+//             ...state,
+//             input:state.todos[action.payload],
+//             index:action.payload
+//         }
+//     }
+//     else if(action.type=="update")
+//     {
+//         let updatedData=[...state.todos];
+//         updatedData[state.index] = state.input;
+//         return{
+//             ...state,
+//             todos:updatedData,
+//             index:null,
+//             input:""
+//         }
+//     }
+//     return state
+// }
+// function handle(){
+//     if(state.index!==null)
+//     {
+//         dispatch({type:"update"})
+//     }
+//     else{
+//         dispatch({type:"add"})
+//     }
+// }
+// let [state,dispatch]= useReducer(red,initial)
+
+//   return (
+//     <div id='parent'>
+//         <h1>Todo List</h1>
+//         <div id='card'>
+//             <input name='input' value={state.input} placeholder='Enter a task' onChange={(e)=>dispatch({type:"write",payload:e.target.value})}/>
+//             <button onClick={handle}>{state.index!==null?"Update":"ADD"}</button>
+//         </div>
+//         <div id='tasks'>
+//         {
+//             state.todos.map((a,b)=>{
+//                 return(<div id='task'>
+//                     <span>{a}</span>                             
+//                     <button onClick={()=>dispatch({type:"del",payload:b})}>Delete</button>
+//                     <button onClick={()=>dispatch({type:"edit",payload:b})}>Edit</button>
+//                 </div>)
+//             })
+//         }
+//         </div>
+//     </div>
+//   )
+// }
+
+// export default Todo
+
+import React, { useContext } from 'react'
+import { storeContext } from './Context'
+
+
 
 const Todo = () => {
-    let initial={
-        input:"",
-        todos:[],
-        index:null
-    }
-function red(state,action){
-    if(action.type=="write")
-    {
-        return{
-            ...state,input:action.payload
+    let{store,dispatch} =useContext(storeContext)
+    function handle(){
+        if(store.index!==null)
+        {
+            dispatch({type:"update"})
+        }
+        else{
+            dispatch({type:"add"})
         }
     }
-    else if(action.type=="add")
-    {
-        return{
-            ...state,
-            todos:[...state.todos,state.input],
-            input:""
-        }
-    }
-    else if(action.type=="del")
-    {
-        return{
-            ...state,
-            todos:state.todos.filter((a,b)=>{
-                return b!=action.payload
-            })
-        }
-    }
-    else if(action.type=="edit")
-    {
-        return{
-            ...state,
-            input:state.todos[action.payload],
-            index:action.payload
-        }
-    }
-    else if(action.type=="update")
-    {
-        let updatedData=[...state.todos];
-        updatedData[state.index] = state.input;
-        return{
-            ...state,
-            todos:updatedData,
-            index:null,
-            input:""
-        }
-    }
-    return state
-}
-function handle(){
-    if(state.index!==null)
-    {
-        dispatch({type:"update"})
-    }
-    else{
-        dispatch({type:"add"})
-    }
-}
-let [state,dispatch]= useReducer(red,initial)
-
   return (
     <div id='parent'>
-        <h1>Todo List</h1>
         <div id='card'>
-            <input name='input' value={state.input} placeholder='Enter a task' onChange={(e)=>dispatch({type:"write",payload:e.target.value})}/>
-            <button onClick={handle}>{state.index!==null?"Update":"ADD"}</button>
+            <input value={store.input} onChange={(e)=>dispatch({type:"write",payload:e.target.value})}/>
+            <button onClick={handle}>{store.index!==null?"Update":"Add"}</button>
         </div>
         <div id='tasks'>
         {
-            state.todos.map((a,b)=>{
-                return(<div id='task'>
-                    <span>{a}</span>                             
-                    <button onClick={()=>dispatch({type:"del",payload:b})}>Delete</button>
-                    <button onClick={()=>dispatch({type:"edit",payload:b})}>Edit</button>
-                </div>)
+            store.todos.map((a,b)=>{
+            return(<div id='task'>
+                <span>{a}</span>
+                <button onClick={()=>dispatch({type:"del",payload:b})}>Delete</button>
+                <button onClick={()=>dispatch({type:"edit",payload:b})}>Edit</button>
+            </div>)
             })
         }
-        </div>
+      </div>
     </div>
   )
 }

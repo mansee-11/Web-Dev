@@ -4,13 +4,15 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import {BrowserRouter} from 'react-router-dom'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
-  </StrictMode>,
-)
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <BrowserRouter>
+//     <App />
+//     </BrowserRouter>
+//   </StrictMode>,
+// )
+
+
 // import Context from './Context.jsx'
 // createRoot(document.getElementById('root')).render(
 //   <StrictMode>
@@ -19,3 +21,14 @@ createRoot(document.getElementById('root')).render(
 //     </Context.Provider>
 //   </StrictMode>,
 // )
+
+// lect24
+
+import Context from './Context.jsx'
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Context>
+      <App />
+    </Context>
+  </StrictMode>,
+)
