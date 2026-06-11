@@ -228,13 +228,85 @@
 
 // export default App
 
-import React from 'react'
-import Task from './task'
-import './App.css'
+// import React from 'react'
+// import Task from './task'
+// import './App.css'
+// const App = () => {
+//   return (
+//     <div><Task/></div>
+//   )
+// }
+
+// export default App
+
+
+//lect25
+
+// import React, { useMemo } from 'react'
+// import useCounter from './useCounter'
+
+// const App = () => {
+//   let {count,inc,dec,reset} = useCounter(0)
+//   // let result=0        do not use this baar baar loadhoga website slow ho jayegi
+//   // function call(){
+//   //   for(let i=0;i<100000000;i++)
+//   //   {
+//   //     result+=i
+//   //   }
+//   //   return result
+//   // }
+//   // let total= call()
+
+//   //use this ek barr clculate karke store kardega
+
+//   let total=useMemo(()=>{
+//     let result =0;
+//     for(let i=0;i<100000000;i++){
+//       result+=i
+//     }
+//     return result
+//   },[])
+//   return (
+//     <div>
+//       <h1>{count}</h1>
+//       <h1>{total}</h1>
+//       <button onClick={inc}>Add</button>
+//       <button onClick={dec}>Sub</button>
+//       <button onClick={reset}>Reset</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React, { memo, useState } from 'react'
+
 const App = () => {
+  let [count,SetCount] = useState(0)
+
   return (
-    <div><Task/></div>
+    <div>
+      <h1>{count}</h1>
+      <button onClick={()=>SetCount(count+1)}>Add</button>
+      <Child/>
+    </div>
   )
 }
+
+// const Child = () => {   normally likne pe yeh bar baar chalega
+
+//   console.log("hello")
+
+//   return (
+//     <div>Child</div>
+//   )
+// }
+
+const Child = memo( () => {
+  console.log("hello")
+  return (
+    <div>Child</div>
+  )
+})
 
 export default App
