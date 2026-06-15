@@ -279,19 +279,21 @@
 
 // export default App
 
-import React, { memo, useState } from 'react'
 
-const App = () => {
-  let [count,SetCount] = useState(0)
 
-  return (
-    <div>
-      <h1>{count}</h1>
-      <button onClick={()=>SetCount(count+1)}>Add</button>
-      <Child/>
-    </div>
-  )
-}
+// import React, { memo, useState } from 'react'
+
+// const App = () => {
+//   let [count,SetCount] = useState(0)
+
+//   return (
+//     <div>
+//       <h1>{count}</h1>
+//       <button onClick={()=>SetCount(count+1)}>Add</button>
+//       <Child/>
+//     </div>
+//   )
+// }
 
 // const Child = () => {   normally likne pe yeh bar baar chalega
 
@@ -302,11 +304,28 @@ const App = () => {
 //   )
 // }
 
-const Child = memo( () => {
-  console.log("hello")
+// const Child = memo( () => {
+//   console.log("hello")
+//   return (
+//     <div>Child</div>
+//   )
+// })
+
+// export default App
+
+import React from 'react'
+import UserList from './UserList'
+import UserProfile from './UserProfile'
+import { Route, Routes } from 'react-router-dom'
+const App = () => {
   return (
-    <div>Child</div>
+    <div>
+      <Routes>
+        <Route path='/' element={<UserList/>}></Route>
+        <Route path='/profile/:id' element={<UserProfile/>}></Route>
+      </Routes>
+    </div>
   )
-})
+}
 
 export default App
