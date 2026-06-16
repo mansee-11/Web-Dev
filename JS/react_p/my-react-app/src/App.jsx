@@ -313,18 +313,45 @@
 
 // export default App
 
+//lect26
+
+// import React from 'react'
+// import UserList from './UserList'
+// import UserProfile from './UserProfile'
+// import { Route, Routes } from 'react-router-dom'
+// const App = () => {
+//   return (
+//     <div>
+//       <Routes>
+//         <Route path='/' element={<UserList/>}></Route>
+//         <Route path='/profile/:id' element={<UserProfile/>}></Route>
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// import React from 'react'
+// import Shop from './Shop'
+
+// const App = () => {
+//   return (
+//     <div><Shop/></div>
+//   )
+// }
+
+// export default App
+
+
+//lect 27
+
 import React from 'react'
-import UserList from './UserList'
-import UserProfile from './UserProfile'
-import { Route, Routes } from 'react-router-dom'
+import Lect27 from './Lect27'
 const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path='/' element={<UserList/>}></Route>
-        <Route path='/profile/:id' element={<UserProfile/>}></Route>
-      </Routes>
-    </div>
+    <div><Lect27/></div>
   )
 }
 
