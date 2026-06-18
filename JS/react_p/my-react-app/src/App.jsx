@@ -347,11 +347,23 @@
 
 //lect 27
 
+// import React from 'react'
+// import Lect27 from './Lect27'
+// const App = () => {
+//   return (
+//     <div><Lect27/></div>
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
-import Lect27 from './Lect27'
+import ChatBot from './ChatBot'
+
 const App = () => {
   return (
-    <div><Lect27/></div>
+    <div><ChatBot/></div>
   )
 }
 
