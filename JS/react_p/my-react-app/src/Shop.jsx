@@ -35,6 +35,10 @@ const Shop = () => {
           <button className='border border-gray-300 w-[80px] h-[30px] rounded-3xl text-zinc-700'>Women</button>
           <button className='border border-gray-300 w-[60px] h-[30px] rounded-3xl text-zinc-700'>Home</button>
         </div>
+
+        <div>
+
+        </div>
     </div>
   )
 }
