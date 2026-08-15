@@ -333,18 +333,6 @@
 // export default App
 
 
-import React from 'react'
-import Shop from './Shop'
-
-const App = () => {
-  return (
-    <div><Shop/></div>
-  )
-}
-
-export default App
-
-
 //lect 27
 
 // import React from 'react'
@@ -368,3 +356,33 @@ export default App
 // }
 
 // export default App
+
+
+import React from 'react'
+import Shop from './Shop'
+import Product_detail from './Product_detail'
+import { Routes, Route ,useNavigate} from 'react-router-dom'
+import Cart from './Cart'
+
+const App = () => {
+  let navigate =useNavigate()
+  
+  return (
+    <div>
+      <nav className='flex w-full border-b h-[70px] items-center'>
+        <div className='flex justify-between w-9/10'>
+            <h1 className='text-2xl font-bold ml-20'onClick={()=>{navigate('/')}}>Shop<span className='text-emerald-600'>Kart</span></h1>
+            <button className='text-2xl border border-gray-300 w-[120px] h-[40px] rounded-xl'onClick={()=>{navigate('/cart')}}>🛒Cart</button>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Shop />} />
+
+        <Route path="/product/:id" element={<Product_detail />} />
+        <Route path="/cart" element={<Cart />}/>
+      </Routes>
+    </div>
+  )
+}
+
+export default App
