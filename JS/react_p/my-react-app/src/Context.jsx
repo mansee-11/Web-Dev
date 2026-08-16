@@ -71,13 +71,15 @@
 
 
 //E-commerce 
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useReducer ,useEffect} from 'react'
 import { PRODUCTS } from './dummydata'
 
 export const storeContext = createContext()
 
+let saved = localStorage.getItem("cart")
+
 let initial = {
-    products: PRODUCTS.map((item) => {
+    products: saved ? JSON.parse(saved) :PRODUCTS.map((item) => {
         return {
             ...item,
             quantity: 0
@@ -141,12 +143,29 @@ function red(store, action) {
             })
         }
     }
+    else if(action.type === "empty") {
+
+        return {
+            ...store,
+
+            products: store.products.map((item) => {
+                return {
+                    ...item,
+                    quantity:0
+                }
+            })
+        }
+    }
     return store
 }
 
 const Context = ({ children }) => {
 
     let [store, dispatch] = useReducer(red, initial)
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(store.products))
+    }, [store])
 
     return (
         <storeContext.Provider value={{ store, dispatch }}>

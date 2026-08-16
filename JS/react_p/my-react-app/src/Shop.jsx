@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext , useState  } from 'react'
 import { PRODUCTS ,inr,GRADIENT} from './dummydata'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { storeContext } from './Context'
@@ -13,6 +13,28 @@ const Shop = () => {
 
   let { dispatch } = useContext(storeContext)
 
+  let [category, setCategory] = useState("All")
+
+  let[search , setSearch]=useState("")
+
+  let [sort, setSort] = useState("featured")
+
+  let filteredProducts = PRODUCTS.filter((item) => {
+    return (category === "All" || item.category === category)  && item.title.toLowerCase().includes(search.toLowerCase())
+  })
+
+  let sortedProducts = [...filteredProducts]
+
+  if (sort === "low") {
+    sortedProducts.sort((a, b) => a.price - b.price)
+  }
+  else if (sort === "high") {
+    sortedProducts.sort((a, b) => b.price - a.price)
+  }
+  else if (sort === "rating") {
+    sortedProducts.sort((a, b) => b.rating - a.rating)
+  }
+  
   return (
     <div className='h-full w-full flex flex-col justify-center items-center gap-8 mt-10'>
 
@@ -23,29 +45,30 @@ const Shop = () => {
         </div>
 
         <div className='w-9/10 flex gap-4'>
-          <input className='border border-gray-300 w-4/5 h-[40px] rounded-lg' placeholder='  Search Products...'></input>
+          <input className='border border-gray-300 w-4/5 h-[40px] rounded-lg' placeholder='  Search Products...' onChange={(e) => setSearch(e.target.value)}></input>
 
-          <select className='border border-gray-300 w-1/5 h-[40px] rounded-lg  text-zinc-700 text-center text-xl'>
-            <option>Sort:Featured</option>
-            <option>Price Low to High</option>
-            <option>Price High to low</option>
-            <option>Top Rated</option>
+          <select className='border border-gray-300 w-1/5 h-[40px] rounded-lg  text-zinc-700 text-center text-xl' onChange={(e) => setSort(e.target.value)}>
+            <option value="featured">Sort:Featured</option>
+            <option value="low">Price Low to High</option>
+            <option value="high">Price High to low</option>
+            <option value="rating">Top Rated</option>
           </select>
         </div>
 
         <div className='w-9/10 flex gap-2'>
-          <button className='border border-gray-300 w-[50px] h-[30px] rounded-3xl text-zinc-700'>All</button>
-          <button className='border border-gray-300 w-[100px] h-[30px] rounded-3xl text-zinc-700'>Electronics</button>
-          <button className='border border-gray-300 w-[100px] h-[30px] rounded-3xl text-zinc-700'>Accessories</button>
-          <button className='border border-gray-300 w-[100px] h-[30px] rounded-3xl text-zinc-700'>Footware</button>
-          <button className='border border-gray-300 w-[50px] h-[30px] rounded-3xl text-zinc-700'>Men</button>
-          <button className='border border-gray-300 w-[80px] h-[30px] rounded-3xl text-zinc-700'>Women</button>
-          <button className='border border-gray-300 w-[60px] h-[30px] rounded-3xl text-zinc-700'>Home</button>
+          <button className='border border-gray-300 w-[50px] h-[30px]  rounded-3xl text-zinc-700' onClick={()=>setCategory("All")}>All</button>
+          <button className='border border-gray-300 w-[100px] h-[30px] rounded-3xl text-zinc-700' onClick={()=>setCategory("Electronics")}>Electronics</button>
+          <button className='border border-gray-300 w-[100px] h-[30px] rounded-3xl text-zinc-700' onClick={()=>setCategory("Accessories")}>Accessories</button>
+          <button className='border border-gray-300 w-[100px] h-[30px] rounded-3xl text-zinc-700' onClick={()=>setCategory("Footwear")}>Footwear</button>
+          <button className='border border-gray-300 w-[50px] h-[30px]  rounded-3xl text-zinc-700' onClick={()=>setCategory("Men")}>Men</button>
+          <button className='border border-gray-300 w-[80px] h-[30px]  rounded-3xl text-zinc-700' onClick={()=>setCategory("Women")}>Women</button>
+          <button className='border border-gray-300 w-[60px] h-[30px]  rounded-3xl text-zinc-700' onClick={()=>setCategory("Home")}>Home</button>
         </div>
 
         <div id='parent' className='grid grid-cols-2 grid-flow-row gap-4 w-9/10'>
             {
-                PRODUCTS.map((a)=>{
+                sortedProducts.map((a)=>{
+                  
                     return(
                     <div id='child' className='w-[550px] h-[400px] border border-gray-300 rounded-3xl flex flex-col items-center gap-6' onClick={()=>fun1(a.id)}>
                       

@@ -358,11 +358,12 @@
 // export default App
 
 
-import React from 'react'
+import React, {useContext} from 'react'
 import Shop from './Shop'
 import Product_detail from './Product_detail'
 import { Routes, Route ,useNavigate} from 'react-router-dom'
 import Cart from './Cart'
+import { useContext } from 'react'
 
 const App = () => {
   let navigate =useNavigate()

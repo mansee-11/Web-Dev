@@ -23,13 +23,25 @@ import { GRADIENT,inr } from './dummydata'
 
 const Cart = () => {
 
-    let { store } = useContext(storeContext)
+    let { store,dispatch } = useContext(storeContext)
 
     let cartItems = store.products.filter((item) => {
         return item.quantity > 0
     })
 
+    let total = cartItems.reduce((sum, item) => {
+      return sum + (item.price * item.quantity)
+    }, 0)
+    if(total==0){
+      return(
+        <div className='text-3xl flex justify-center mt-50 font-bold text-emerald-500  w-full'>
+          YOU ARE ALL DONE WITH CART . . . . CONTINUE SHOPPING
+        </div>
+      )
+    }
+    else{
     return (
+      
       <div id='parent' className='flex flex-col gap-4 w-full items-center mt-10'>
 
         {
@@ -46,20 +58,25 @@ const Cart = () => {
                     <h1 className='font-semibold'>{a.title}</h1>
                     <h1 className='font-bold text-2xl'>{inr(a.price)}</h1>
                   <div className='flex gap-2'>
-                    <button className='border border-gray-300 w-[20px] rounded-sm'>+</button>
-                    <h1> {a.quantity}</h1>
-                    <button className='border border-gray-300 w-[20px] rounded-sm'>-</button>
+                    <button className='border border-gray-300 w-[20px] rounded-sm font-bold'onClick={()=>dispatch({type:"ADD",payload:a.id})}>+</button>
+                    <h1 className='font-bold'> {a.quantity}</h1>
+                    <button className='border border-gray-300 w-[20px] rounded-sm font-bold'onClick={()=>dispatch({type:"dec",payload:a.id})}>-</button>
                   </div>
               </div>
-              <button className='font-bold text-3xl'>🗑️</button>
+              <button className='font-bold text-3xl'onClick={()=>dispatch({type:"del",payload:a.id})}>🗑️</button>
 
               </div>
             )
           })
        }
-
+        <div className='w-7/10 flex justify-between mt-4'>
+          <h1 className='font-bold text-2xl'>Total:</h1>
+          <h1 className='font-bold text-2xl'> {inr(total)}</h1>
+        </div>
+        <button className='w-7/10 font-bold text-white bg-emerald-600 h-[40px] text-xl rounded-xl'onClick={()=>dispatch({type:"empty"})}>Checkout • {inr(total)}</button>
       </div>
     )
+  }
 }
 
 export default Cart
