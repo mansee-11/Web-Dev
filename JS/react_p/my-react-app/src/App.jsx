@@ -363,17 +363,24 @@ import Shop from './Shop'
 import Product_detail from './Product_detail'
 import { Routes, Route ,useNavigate} from 'react-router-dom'
 import Cart from './Cart'
-import { useContext } from 'react'
+import { storeContext } from './Context'
 
 const App = () => {
   let navigate =useNavigate()
-  
+
+  let { store } = useContext(storeContext)
+
+  let cartCount = store.products.reduce((sum, item) => {
+    return sum + item.quantity
+  }, 0)
+
+
   return (
     <div>
       <nav className='flex w-full border-b h-[70px] items-center'>
         <div className='flex justify-between w-9/10'>
             <h1 className='text-2xl font-bold ml-20'onClick={()=>{navigate('/')}}>Shop<span className='text-emerald-600'>Kart</span></h1>
-            <button className='text-2xl border border-gray-300 w-[120px] h-[40px] rounded-xl'onClick={()=>{navigate('/cart')}}>🛒Cart</button>
+            <button className='text-2xl border border-gray-300 w-[120px] h-[40px] rounded-xl'onClick={()=>{navigate('/cart')}}>🛒Cart({cartCount})</button>
         </div>
       </nav>
       <Routes>
