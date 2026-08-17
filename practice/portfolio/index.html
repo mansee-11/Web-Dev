@@ -10,7 +10,7 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <div id="main" class="w-screen bg-black">
+    <div id="main" class="w-full bg-black">
         <nav class="backdrop-blur-md z-10 flex items-center justify-between fixed bg-black/50 border-b border-b-gray-500 text-white h-[70px] w-full flex-row">
             <div id="title" class="flex justify-center w-[150px] text-3xl font-semibold font-sans subpixel-antialiased">Port<span class="text-red-400">folio</span></div>
             <div id="parts" class="sm:flex justify-between w-1/3 text-gray-400 hidden ">
@@ -20,23 +20,25 @@
                 <button id="four" class="hover:text-red-400 hover:underline hover:underline-offset-4 hover:decoration-red-400">Skills</button>
                 <button id="five" class="hover:text-red-400 hover:underline hover:underline-offset-4 hover:decoration-red-400">Contact</button>
             </div>
-            <div class="flex justify-around items-center sm:w-1/6 w-2/6">
+            <div class="flex justify-around items-center sm:w-1/6 w-[40%]">
                 <button id="theme" class="hover:bg-red-400/80 hover:duration-500 h-[40px] w-[40px] flex justify-center items-center rounded-xl"><i class="fa-solid fa-circle-half-stroke"></i></button>
-                <button id="five_2" class="w-[90px] h-[35px] bg-white text-black flex items-center justify-center rounded-xl hover:ease-in hover:duration-500 hover:-translate-y-1">Let's Talk</button>
+                <button id="five_2" class="w-[80px] h-[35px] bg-white text-black flex items-center justify-center rounded-xl hover:ease-in hover:duration-500 hover:-translate-y-1">Let's Talk</button>
             </div>
         </nav>
         <div id="nav" class="h-[70px] w-full"></div>
         <div id="home" class="w-full flex flex-wrap">
-            <div class="flex sm:gap-24 text-gray-600 ml-4 sm:h-[550px] h-[1200px] w-full sm:flex-row flex-col">
+            <div class="flex sm:gap-24 text-gray-600 ml-4 sm:h-[600px] h-[1100px] w-full sm:flex-row flex-col">
                 <div class="sm:w-1/2 gap-6 flex flex-col">
                     <div class="text-red-400 text-xl">Welcome to my portfolio</div>
-                    <h1 class="text-7xl font-bold w-[95%]"><span id="hi" class="text-white">Hi, I'm </span><span class="text-red-400 italic font-serif">Mansee </span>Designer & Developer</h1>
-                    <div class="text-lg sm:w-2/3 w-[90%]">I create beautiful digital experiences that combine stunning design with clean, efficient code. Let's build something amazing together.</div>
+                    <h1 class="text-5xl sm:text-7xl font-bold w-[95%]"><span id="hi" class="text-white">Hi, I'm </span><span class="text-red-400 italic font-serif">Mansee </span>Developer & DSA Enthusiast</h1>
+                    <div class="text-lg sm:w-2/3 w-[95%]">Computer Science student focused on development and problem solving. Enjoy building responsive web experiences, exploring new technologies,and turning ideas into practical projects.</div>
                     <div class="flex flex-wrap gap-4 w-[90%]">
                         <button id="three_2" class="text-black bg-white h-[50px] w-[200px] rounded-xl font-semibold">View My Work <i class="fa-solid fa-arrow-down"></i></button>
-                        <button id="resume" class="border-2 border-gray-500 h-[50px] w-[200px] rounded-xl font-semibold text-white hover:duration-300 hover:border-white hover:bg-neutral-600">Download resume</button>
+                        <a href="My Resume.pdf" target="_blank" rel="noopener noreferrer">
+                            <button id="resume" class="border-2 border-gray-500 h-[50px] w-[200px] rounded-xl font-semibold text-white hover:duration-300 hover:border-white hover:bg-neutral-600">View / Download resume</button>
+                        </a>
                     </div>
-                    <div id="icon" class="flex gap-4 text-white sm:justify-start justify-center sm:w-full w-screen">
+                    <div id="icon" class="flex gap-4 text-white sm:justify-start justify-center sm:w-full w-full">
                         <a href="https://github.com/mansee-11" target="_blank">
                                 <button class="rounded-full h-[45px] w-[45px] border border-gray-500 hover:duration-300 hover:border-red-400 hover:text-red-400"><i class="fa-brands fa-github text-xl"></i></button>
                         </a>
@@ -51,116 +53,119 @@
                         outline-2 outline-offset-[15px] outline-dashed outline-red-950
                         animate-[spin_3250ms_linear_infinite]"></div>
 
-                        <img  class=" absolute w-full h-full rounded-full" src="me.jpeg"/>
+                        <img  class=" absolute w-full h-full rounded-full" src="img.jpg"/>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="about" class="flex flex-col gap-8 items-center bg-neutral-900 sm:h-[900px] h-[2000px] w-full text-gray-600">
+        <div id="about" class="flex flex-col gap-8 items-center bg-neutral-900 sm:h-[900px] h-[2100px] w-full text-gray-600">
             <div class="text-red-400 mt-[80px] text-base">ABOUT ME</div>
-            <div id="a_desc" class="text-5xl text-center sm:w-3/5 font-bold text-white">Passionate about creating <span class="italic font-semibold font-serif">digital magic</span></div>
+            <div id="a_desc" class="text-5xl text-center sm:w-3/5 font-bold text-white">Building <span class="italic font-semibold font-serif">Ideas Into Projects</span></div>
             <div class="w-4/5 flex gap-24 sm:flex-row flex-col">
                 <div class=" sm:w-1/2 flex flex-col gap-8 text-lg ">
-                    <div>I’m a passionate computer science student and aspiring web developer. I enjoy building clean, responsive websites and continuously improving my skills through hands-on projects and learning.</div>
-                    <div>I’m currently learning frontend development using HTML, CSS, JavaScript, bootstrap and Tailwind CSS. I enjoy turning ideas into real projects and exploring new technologies.</div>
+                    <div> I’m a Computer Science Engineering student with an interest in development and software engineering. I enjoy building clean, responsive websites and learning by turning ideas into practical projects.</div>
+                    <div> I work with HTML, CSS, Tailwind CSS, Bootstrap, JavaScript and React, while strengthening my problem-solving and DSA skills using C++ and Java. I’m continuously exploring new technologies and improving through hands-on development.</div>
                 </div>
                 <div class="grid grid-cols-2 grid-rows-2 gap-6 text-white">
                     <div id="a_tab1" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-5xl">🎓</span> Computer Science Student</div>
-                    <div id="a_tab2" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">🧩</span> Strong in Problem Solving</div>
+                    <div id="a_tab2" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">🧩</span> Problem Solving & DSA</div>
                     <div id="a_tab3" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">📈</span> Actively Improving Skill</div>
-                    <div id="a_tab4" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">🛠</span> Hands-on with Modern Tools</div>
+                    <div id="a_tab4" class=" duration-300 ease-in-out hover:duration-300 hover:-translate-y-2 hover:ease-in-out border border-zinc-700 sm:h-[120px] h-[150px] sm:w-[200px] w-[150px] rounded-2xl flex flex-col items-center justify-center text-lg text-center bg-neutral-800"><span class="text-4xl">🛠</span> Hands-on Developer</div>
                 </div>
             </div>
             <div class="w-4/5 grid sm:grid-cols-4 grid-cols-1 grid-rows-1 gap-12 pt-8">
                 <div id="a_card1" class=" group border border-zinc-700 sm:h-[220px] sm:w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
                     <div class="h-[50px] w-[50px] bg-red-900/30 rounded-xl flex justify-center items-center text-red-400 group-hover:bg-red-900/50"><i class="fa-solid fa-palette text-2xl"></i></div>
                     <div id="a_card_11" class="text-white font-bold">UI/UX Design</div>
-                    <div>Creating beautiful, intuitive interfaces that users love</div>
+                    <div>Designing clean and user-friendly interfaces for web projects.</div>
                 </div>
                 <div id="a_card2" class=" group border border-zinc-700 sm:h-[220px] sm:w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
                     <div class="h-[50px] w-[50px] bg-red-900/30 rounded-xl flex justify-center items-center text-red-400 group-hover:bg-red-900/50"><i class="fa-solid fa-code text-2xl"></i></div>
                     <div id="a_card_22" class="text-white font-bold">Development</div>
-                    <div>Building robust applications with modern technologies</div>
+                    <div>Building responsive websites using modern technologies.</div>
                 </div>
                 <div id="a_card3" class=" group border border-zinc-700 sm:h-[220px] sm:w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
                     <div class="h-[50px] w-[50px] bg-red-900/30 rounded-xl flex justify-center items-center text-red-400 group-hover:bg-red-900/50"><i class="fa-regular fa-lightbulb text-2xl"></i></div>
                     <div id="a_card_33" class="text-white font-bold">Problem Solving</div>
-                    <div>Finding creative solutions to complex challenges and problems</div>
+                    <div>Developing logical approaches to programming problems.</div>
                 </div>
                 <div id="a_card4" class="group border border-zinc-700 sm:h-[220px] sm:w-[220px] rounded-2xl flex flex-col gap-3 justify-center bg-neutral-800 p-4 transition duration-300 ease-in-out hover:duration-300 hover:-translate-y-4 hover:ease-in-out hover:border-red-400">
                     <div class="h-[50px] w-[50px] bg-red-900/30 rounded-xl flex justify-center items-center text-red-400 group-hover:bg-red-900/50"><i class="fa-solid fa-meteor text-2xl"></i></div>
-                    <div id="a_card_44" class="text-white font-bold">Fast Delivery</div>
-                    <div>Delivering quality and correct work on time, every time </div>
+                    <div id="a_card_44" class="text-white font-bold">Continuous Learner</div>
+                    <div>Exploring new technologies and Continuously improving.</div>
                 </div>
             </div>
         </div>
-        <div id="work" class="flex flex-col gap-6 items-center bg-black sm:h-[1550px] h-[2500px] w-full text-gray-600">
+        <div id="work" class="flex flex-col gap-6 items-center bg-black sm:h-[1550px] h-[2750px] w-full text-gray-600">
             <div class="text-red-400 mt-[80px] text-base">MY WORK</div>
             <div id="w_title" class="text-5xl sm:text-6xl text-center sm:w-3/5 font-bold text-white">Featured <span class="italic font-semibold font-serif">Projects</span></div>
             <div class="text-xl w-[90%] text-center">Here are some of the practice projects I’ve worked on while learning web development.</div>
             <div class="p-8 flex sm:flex-row flex-col gap-12 sm:h-[400px] w-full">
                 <div class="sm:w-1/2 h-full rounded-3xl border overflow-hidden">
-                    <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-200" src="https://images.unsplash.com/photo-1579309401389-a2476dddf3d4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-200" src="sootradhar1.png">
                 </div>
                 <div class="flex flex-col justify-center sm:w-1/2 h-full gap-4">
-                    <div class="text-red-400">JavaScript game logic and loops</div>
-                    <div id="w_tab1" class="text-4xl text-white font-bold">🐍 Snake Game</div>
-                    <div class="text-lg">A classic snake game built using JavaScript where the player controls the snake using keyboard inputs.</div>
+                    <div class="text-red-400">AI • Full-Stack Development • Hackathon</div>
+                    <div id="w_tab1" class="text-4xl text-white font-bold">🧠 Sootradhar – AI Industrial Knowledge Intelligence</div>
+                    <div class="text-lg">An AI-powered platform designed to turn industrial documents and operational knowledge into an intelligent, searchable knowledge system. The project combines document ingestion, knowledge extraction, knowledge graphs and a RAG-based AI copilot to help users retrieve and understand industrial information.</div>
                     <div class="flex gap-2">
-                        <div class="bg-neutral-800 h-[35px] w-[100px] text-white flex justify-center items-center rounded-3xl">JavaScript</div>
-                        <div class="bg-neutral-800 h-[35px] w-[70px] text-white flex justify-center items-center rounded-3xl">CSS</div>
+                        <div class="bg-neutral-800 h-[35px] w-[150px] text-white flex justify-center items-center rounded-3xl">AI Integration</div>
+                        <div class="bg-neutral-800 h-[35px] w-[70px] text-white flex justify-center items-center rounded-3xl">RAG</div>
+                        <div class="bg-neutral-800 h-[35px] w-[150px] text-white flex justify-center items-center rounded-3xl">LLM Integration</div>
                     </div>
-                    <a  class="w-[200px]" href="https://jolly-kringle-a1cc1a.netlify.app/" target="_blank">
+                    <a  class="w-[200px]" href="https://sootradhar.vercel.app/upload" target="_blank">
                         <button id="w_btn1" class="border border-gray-500 h-[50px] w-[200px] text-xl text-white rounded-xl hover:duration-300 hover:border-white hover:bg-neutral-600 hover:border-2">View Project <i class="fa-solid fa-up-right-from-square"></i></button>
                     </a>
                 </div>
             </div>
             <div class="p-8 flex sm:flex-row flex-col gap-12 sm:h-[400px] w-full">
                 <div class="sm:hidden block h-full rounded-3xl border overflow-hidden">
-                    <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-150" src="https://plus.unsplash.com/premium_vector-1734051503949-ad1086fb2260?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-150" src="OptiStock.png">
                 </div>
                 <div class="flex flex-col justify-center sm:w-1/2 h-full gap-4">
-                    <div class="text-red-400">Web Design & Development</div>
-                    <div id="w_tab2" class="text-4xl text-white font-bold">📚KidLearn – Learning Dashboard</div>
-                    <div class="text-lg">A kid-friendly learning dashboard built using web technologies showing assignments, progress, points, and motivational messages. This project helped me practice layout and UI design skills.</div>
+                    <div class="text-red-400">AI-powered Inventory & Supply Chain Management</div>
+                    <div id="w_tab2" class="text-4xl text-white font-bold">OptiStock AI-Stock Analysis</div>
+                    <div class="text-lg">OptiStock AI is an AI-powered inventory intelligence platform designed to help retail and consumer-goods businesses tackle understock and overstock problems through intelligent inventory analysis, demand forecasting, stock optimization and actionable AI-driven insights.</div>
                     <div class="flex gap-2">
-                        <div class="bg-neutral-800 h-[35px] w-[80px] text-white flex justify-center items-center rounded-3xl">HTML</div>
-                        <div class="bg-neutral-800 h-[35px] w-[70px] text-white flex justify-center items-center rounded-3xl">CSS</div>
+                        <div class="bg-neutral-800 h-[35px] w-[100px] text-white flex justify-center items-center rounded-3xl">TypeScript</div>
+                        <div class="bg-neutral-800 h-[35px] w-[70px] text-white flex justify-center items-center rounded-3xl">React</div>
                     </div>
-                    <a  class="w-[200px]" href="https://beamish-blini-c13e10.netlify.app/" target="_blank">
+                    <a  class="w-[200px]" href="https://adorable-capybara-d5f2ae.netlify.app/" target="_blank">
                         <button id="w_btn2" class="border border-gray-500 h-[50px] w-[200px] text-xl text-white rounded-xl hover:duration-300 hover:border-white hover:bg-neutral-600 hover:border-2">View Project <i class="fa-solid fa-up-right-from-square"></i></button>
                     </a>
                 </div>
                 <div class="sm:block hidden w-1/2 h-full rounded-3xl border overflow-hidden">
-                    <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-150" src="https://plus.unsplash.com/premium_vector-1734051503949-ad1086fb2260?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-150" src="OptiStock.png">
                 </div>
             </div>
             <div class="p-8 flex sm:flex-row flex-col gap-12 sm:h-[400px] w-full">
                 <div class="sm:w-1/2 h-full rounded-3xl border overflow-hidden">
-                    <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-125" src="birthday.png">
+                    <img  class="w-full h-full rounded-3xl duration-300 ease-in hover:duration-300 hover:ease-in hover:scale-105 hover:brightness-125" src="shopkart.png">
                 </div>
                 <div class="flex flex-col justify-center sm:w-1/2 h-full gap-4">
-                    <div class="text-red-400">Web Design & Development</div>
-                    <div id="w_tab3" class="text-4xl text-white font-bold">🎉Birthday Surprise Page</div>
-                    <div class="text-lg">This site was built as a personal gift for my father’s birthday, themed design elements, combining design and heartfelt content to create a meaningful web experience.</div>
+                    <div class="text-red-400">Frontend Development • Web Development</div>
+                    <div id="w_tab3" class="text-4xl text-white font-bold">🛒 E-Commerce Website</div>
+                    <div class="text-lg">A responsive e-commerce website built to practice modern frontend development. The project focuses on creating a structured shopping experience with product browsing, interactive UI components and responsive layouts across different screen sizes.</div>
                     <div class="flex gap-2">
-                        <div class="bg-neutral-800 h-[35px] w-[80px] text-white flex justify-center items-center rounded-3xl">HTML</div>
-                        <div class="bg-neutral-800 h-[35px] w-[70px] text-white flex justify-center items-center rounded-3xl">CSS</div>
+                        <div class="bg-neutral-800 h-[35px] w-[80px] text-white flex justify-center items-center rounded-3xl">React</div>
+                        <div class="bg-neutral-800 h-[35px] w-[120px] text-white flex justify-center items-center rounded-3xl">Tailwind CSS</div>
+                        <div class="bg-neutral-800 h-[35px] w-[100px] text-white flex justify-center items-center rounded-3xl">JavaScript</div>
+
                     </div>
-                    <a  class="w-[200px]" href="https://peaceful-florentine-9a953f.netlify.app/" target="_blank">
+                    <a  class="w-[200px]" href="https://shopkart-react-ecommerce.netlify.app/" target="_blank">
                         <button id="w_btn3" class="border border-gray-500 h-[50px] w-[200px] text-xl text-white rounded-xl hover:duration-300 hover:border-white hover:bg-neutral-600 hover:border-2">View Project <i class="fa-solid fa-up-right-from-square"></i></button>
                     </a>
                 </div>
             </div>
         </div>
-        <div id="skills" class="flex flex-col gap-6 items-center bg-neutral-900 sm:h-[750px] h-[1450px] w-full text-gray-600">
+        <div id="skills" class="flex flex-col gap-6 items-center bg-neutral-900 sm:h-[820px] h-[1700px] w-full text-gray-600">
             <div class="text-red-400 mt-[80px] text-base">MY SkillS</div>
             <div id="s_title" class="text-5xl text-center sm:w-3/5 font-bold text-white">Tools & <span class="italic font-semibold font-serif">Technologies</span></div>
-            <div class="text-xl sm:w-full w-[90%] text-center">I enjoy building responsive websites and continuously improving my technical and problem-solving skills.</div>
+            <div class="text-xl sm:w-full w-[90%] text-center">I build responsive web applications and explore AI-powered solutions while continuously strengthening my development and problem-solving skills.</div>
             <div class="grid sm:grid-cols-2 sm:grid-rows-3 grid-cols-1 grid-rows-6 w-4/5 gap-6">
                 <div class="flex flex-col gap-2">
-                    <div class="flex sm:gap-96 gap-[72%] w-full">
-                        <div id="s_t1" class="text-lg text-white">HTML5</div>
+                    <div class="flex sm:gap-[78%] gap-[72%] w-full">
+                        <div id="s_t1" class="text-lg text-white">React</div>
                         <div>90%</div>
                     </div>
                     <div class="w-[92%] h-[10px] relative">
@@ -169,8 +174,8 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex sm:gap-96 gap-[75%] w-full">
-                        <div id="s_t2" class="text-lg text-white">CSS3</div>
+                    <div class="flex sm:gap-[72%] gap-[60%] w-full">
+                        <div id="s_t2" class="text-lg text-white">JavaScript</div>
                         <div>85%</div>
                     </div>
                     <div class="w-[92%] h-[10px] relative">
@@ -179,7 +184,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex sm:gap-[340px] gap-[60%] w-full">
+                    <div class="flex sm:gap-[68%] gap-[55%] w-full">
                         <div id="s_t3" class="text-lg text-white">Tailwind CSS</div>
                         <div>70%</div>
                     </div>
@@ -189,7 +194,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex sm:gap-96 gap-[76%] w-full">
+                    <div class="flex sm:gap-[80%] gap-[73%] w-full">
                         <div id="s_t4" class="text-lg text-white">SQL </div>
                         <div>95%</div>
                     </div>
@@ -199,7 +204,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex sm:gap-[67%] gap-[60%] w-full">
+                    <div class="flex sm:gap-[67%] gap-[50%] w-full">
                         <div id="s_t5" class="text-lg text-white">Git & GitHub</div>
                         <div>80%</div>
                     </div>
@@ -209,7 +214,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex sm:gap-[70%] gap-[66%] w-full">
+                    <div class="flex sm:gap-[72%] gap-[60%] w-full">
                         <div id="s_t6" class="text-lg text-white">Bootstrap</div>
                         <div>75%</div>
                     </div>
@@ -219,20 +224,31 @@
                     </div>
                 </div>
             </div>
-            <div id="s_title2" class="text-2xl text-white p-8 text-center">Skills And Languages I’m Learning & Using</div>
-            <div class="flex  flex-wrap h-200px sm:w-[75%] w-[90%] gap-2 justify-center">
+            <div id="s_title2" class="text-2xl text-white p-8 text-center">Skills & Technologies I’m Learning & Using</div>
+            <div class="flex  flex-wrap h-200px sm:w-[80%] w-[90%] gap-2 justify-center">
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[80px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">HTML5</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[80px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">CSS3</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[150px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Tailwind CSS</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[150px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">AI Integration</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Bootstrap</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">JavaScript</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">React.js</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Next.js</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[120px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">REST APIs</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[120px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Canva</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[120px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Vercel</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[120px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Netlify</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[130px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">API Integration</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[70px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">DSA</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[70px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Git</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">GitHub</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">VS Code</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Java</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">CPP</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[70px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">C</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Python</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">DBMS</div>
+                <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">OOP</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[150px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">Problem Solving</div>
                 <div class="border border-gray-500 rounded-3xl h-[40px] w-[100px]  flex justify-center items-center hover:border-red-400 hover:text-red-400">SQL</div>
             </div>
@@ -240,7 +256,7 @@
         <div id="contact" class="flex flex-col gap-6 items-center bg-black sm:h-[850px] h-[1350px] w-full text-gray-600">
             <div class="text-red-400 mt-[80px] text-base">Get In Touch</div>
             <div id="c_title" class="text-4xl sm:text-5xl text-center sm:w-3/5 font-bold text-white">Let's Work <span class="italic font-semibold font-serif">Together </span></div>
-            <div class="text-xl sm:w-3/5 tracking-wide text-center">Have a project in mind? I'd love to hear from you. Send me a message and let's create something amazing.</div>
+            <div class="text-xl sm:w-3/5 tracking-wide text-center">Have an opportunity, project, or collaboration in mind? I'd love to hear from you.Let's connect and build something meaningful together.</div>
             <div class="flex sm:flex-row flex-col w-[85%] justify-between gap-4">
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-6">
@@ -255,7 +271,7 @@
                             <div class="h-[50px] w-[50px] bg-red-900/30 rounded-xl flex justify-center items-center text-red-400"><i class="fa-solid fa-phone text-xl"></i></div>
                             <div>
                                 <div id="c_2" class="text-white text-lg">Phone</div>
-                                <div>+91 XXXXX XXXXX</div>
+                                <div>+91 83490 57010</div>
                             </div>
                         </div>
                         <div class="flex gap-4">
@@ -266,35 +282,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="border border-zinc-600 rounded-3xl bg-neutral-900 h-[125px] sm:w-[400px] p-6 text-gray-400">
+                    <div class="border border-zinc-600 rounded-3xl bg-neutral-900 h-[150px] sm:w-[400px] p-6 text-gray-400">
                         <div class="text-white text-lg flex gap-2 items-center"><i class="fa-solid fa-paw text-blue-500"></i> Available for Work</div>
-                        <div>I'm currently taking on new projects. Let's discuss how I can help you.</div>
+                        <div>I'm open to internship opportunities, collaborations, and interesting software development projects.</div>
                     </div>
                 </div>    
-                <form class="sm:w-[55%] bg-neutral-900 border border-zinc-600 rounded-3xl flex flex-wrap flex-col p-8 gap-6">
+                <form name="contact" method="POST" netlify class="sm:w-[55%] bg-neutral-900 border border-zinc-600 rounded-3xl flex flex-wrap flex-col p-8 gap-6">
                     <div class="flex sm:flex-row flex-col gap-4 justify-between w-full">
                         <div class="flex flex-col gap-2">
                             <label  class="text-white" for="1">Your Name</label>
-                            <input  class="h-[50px] w-[250px] p-4 bg-black border border-zinc-600 rounded-xl" id="1" type="text" placeholder="John Doe">
+                            <input  name="name" class="h-[50px] w-[250px] p-4 bg-black border border-zinc-600 rounded-xl" id="1" type="text" placeholder="John Doe" required>
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-white" for="2">Your Email</label>
-                            <input class="h-[50px] w-[250px] p-4 bg-black border border-zinc-600 rounded-xl" type="email" id="2" placeholder="john@example.com">
+                            <input name="email" class="h-[50px] w-[250px] p-4 bg-black border border-zinc-600 rounded-xl" type="email" id="2" placeholder="john@example.com" required>
                         </div>
                     </div>
                     <div class="flex flex-col gap-2">
                         <label  class="text-white" for="3">Subject</label>
-                        <input  class="h-[50px] w-full p-4 bg-black border border-zinc-600 rounded-xl" id="3" type="text" placeholder="Project Inquiry">
+                        <input  name="subject" class="h-[50px] w-full p-4 bg-black border border-zinc-600 rounded-xl" id="3" type="text" placeholder="Project Inquiry" required>
                     </div>
                     <div class="flex flex-col gap-2">
                         <label  class="text-white" for="4">Message</label>
-                        <textarea id="4" class="h-[120px] w-full p-4 bg-black border border-zinc-600 rounded-xl" placeholder="Tell me about your project"></textarea>
+                        <textarea name="message" id="4" class="h-[120px] w-full p-4 bg-black border border-zinc-600 rounded-xl" placeholder="Tell me about your project" required></textarea>
                     </div>
                     <input  class="bg-white h-[50px] w-full text-black font-semibold text-lg rounded-xl duration-300 ease-in hover:duration-300 hover:ease-in hover:-translate-y-1 hover:bg-white/80" type="submit" value="Send Message">
                 </form>
             </div>
         </div>
-        <footer class="sm:h-[100px] h-[200px] w-screen border-t border-t-gray-500 flex sm:flex-row flex-col px-12 sm:justify-between justify-around items-center">
+        <footer class="sm:h-[100px] h-[200px] w-full border-t border-t-gray-500 flex sm:flex-row flex-col px-12 sm:justify-between justify-around items-center">
             <div id="title_end" class="flex text-2xl font-semibold font-sans subpixel-antialiased text-white">Port<span class="text-red-400">folio</span></div>
             <div id="icon2" class="flex gap-4 text-white">
                 <a href="https://github.com/mansee-11" target="_blank">
